@@ -1,35 +1,52 @@
 # Ω-DM-002 R3 — Local Audit
 
-**Status:** CODE READY / NOT EXECUTED
+**Status:** EXECUTION AUDIT / NOT CERTIFIED
 
-A local independent numerical check of the R3 equations was performed before treating the R3 protocol as executed.
+A local independent numerical check was performed before promoting the R3 implementation to an official scientific result.
 
-## Finding
+## Earlier finding
 
-A straightforward joint ridge reconstruction improves held-out prediction relative to the zero-relation baseline, but the selected graph remains substantially denser than the hidden graph. With a representative run, active edges were ~72 versus 33 true edges. Therefore ridge regularization is not an adequate implementation of the preregistered minimum-structure criterion.
+A straightforward joint ridge reconstruction improved held-out prediction relative to the zero-relation baseline, but the selected graph was substantially denser than the hidden graph. Ridge is therefore not an adequate substitute for the preregistered minimum-structure procedure.
 
-## Consequence
+## Optimized execution audit — 2026-09-11
 
-Do **not** mark R3 PASS. The implementation must use the specified L1/complexity-selection procedure rather than substitute ridge regression.
+An algebraically equivalent NumPy implementation was built locally using sufficient statistics `G = XᵀX`, `b = Xᵀy`, and `yᵀy` to remove repeated full-matrix scans. The purpose was execution diagnostics, not protocol replacement.
 
-The observation is retained as an engineering audit: predictive recovery can occur before sparse structural recovery, so prediction and topology recovery must remain separate gates.
+Main deterministic configuration was kept identical to R3: seed `20260911`, `N=24`, 40 training trajectories, 20 test trajectories, length 80, `K=.05`, `gamma=.02`, `sigma=.005`, `edge_p=.12`, and lambda grid `{0.1, 0.3, 1, 3, 10, 30, 100}`.
 
-## Implementation status — 2026-09-11
+### Main diagnostic run
 
-A dedicated stdlib-only executor has now been committed as `run_r3.py`. It implements:
+The coordinate-descent solver reached its iteration cap rather than the requested tolerance, so this run is **not certified as converged**.
 
-- joint symmetric non-negative edge reconstruction;
-- coordinate-descent L1 fitting;
-- the complete preregistered lambda grid `{0.1, 0.3, 1, 3, 10, 30, 100}`;
-- training-only BIC-like complexity selection;
-- frozen selected graph;
-- held-out rollout evaluation at horizons 1, 2, 5 and 10;
-- null and temporal-permutation control scaffolding.
+At 5000 iterations:
 
-Executor blob SHA: `5a93522025c18842e28aa1e285e69e89681dd45b`.
+- selected λ = `100`
+- active edges = `103`
+- hidden true edges = `33`
+- baseline h1 RMSE = `32.2280692194`
+- selected h1 RMSE = `18.2845877859`
+- selected h2 RMSE = `46.7038223718`
+- selected h5 RMSE = `94.7946326634`
+- selected h10 RMSE = `142.3212770489`
 
-**Important:** code existence is not an execution result. The official R3 result remains **NOT EXECUTED** until the committed executor is actually run and the exact output is archived.
+The one-step prediction improves, but multi-step rollout degrades strongly and the optimizer has not converged. This is a strong diagnostic warning, not an R3 PASS/FAIL classification.
 
-## Next gate
+### Control diagnostic
 
-After an auditable R3 execution, run Ω-DM-003: controlled deletion of inferred relations to identify a minimal predictive relation core and test necessity versus redundancy.
+Two null seeds and two temporal-permutation seeds were also executed with the optimized diagnostic implementation. The null cases selected zero edges at λ=`0.3` and showed no predictive improvement. Temporal-permutation cases also selected zero edges and showed no predictive improvement. These are only preliminary control samples, not the full preregistered control set.
+
+## Certification boundary
+
+The official R3 result remains **NOT CERTIFIED**. Before certification:
+
+1. implement a demonstrably convergent solver or otherwise certify convergence of the exact preregistered objective;
+2. cross-check the optimized solver against the reference implementation on a small deterministic fixture;
+3. run the complete control set and archive exact output, runtime, code identity and final decision.
+
+Do not promote the diagnostic numbers to a scientific R3 result.
+
+`CODE READY ≠ EXECUTED ≠ CONVERGED ≠ VALIDATED`
+
+## Next implementation
+
+Build the convergent optimized solver while preserving the exact R3 objective and lambda grid. Only after fixture agreement should the full R3 certification run be attempted.
