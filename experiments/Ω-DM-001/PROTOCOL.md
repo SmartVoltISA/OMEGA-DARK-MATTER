@@ -1,6 +1,6 @@
 # Ω-DM-001 — Synthetic Relational Contribution Recovery
 
-**Status:** PROTOCOL / NOT YET EXECUTED
+**Status:** EXECUTED / CONTROL AUDIT COMPLETE
 **Purpose:** test whether a deliberately hidden relational contribution can be recovered from synthetic observables under preregistered controls.
 
 ## Scope
@@ -90,3 +90,31 @@ A successful synthetic recovery only establishes that the chosen hidden variable
 `RESULT-001.md` must contain the exact seed, generator parameters, model scores, recovery statistics, control results, code commit, and an explicit PASS/FAIL/INVALID classification.
 
 Until the executable is actually run, no numerical result is claimed.
+
+---
+
+## Execution record — appended 2026-09-11
+
+**Status:** EXECUTED LOCALLY / CONTROL AUDIT COMPLETE
+
+The executable was run after a control flaw was identified in the first permutation implementation. The first implementation shuffled relation weights on the same edge-pair set and generated observations from the shuffled graph; this was rejected as an invalid control. A corrected permutation control generates observations from the original graph and uses an independently randomized topology preserving edge count and weight multiset only as the fitted relation basis.
+
+Corrected executable commit: `64e062b701676cb38285b4fcc85e6c1f4768c6dd`.
+
+Fixed execution parameters: seed `20260911`; `N=80`; train/test `56/24`; `A_true=2.0`; `lambda_true=0.65`; `eps=0.20`; kernel width `0.45`; noise sigma `0.015`; 20 null repetitions; 20 permutation repetitions.
+
+Main fit:
+- M0 `A=2.4783989771`
+- M1 `A=2.0005088559`
+- recovered `lambda=0.6536026375`
+- held-out RMSE M0 `0.0183405481`
+- held-out RMSE M1 `0.0167181599`
+- improvement `0.0016223882`
+
+Controls:
+- 20 null seeds: mean held-out RMSE improvement approximately `-0.00004797`.
+- 20 corrected topology-permutation seeds: mean held-out RMSE improvement approximately `-0.00050946`, population SD approximately `0.00106496`.
+
+**Decision:** PASS — synthetic identifiability gate.
+
+**Boundary:** this result demonstrates recovery under the explicitly chosen synthetic generator only. The inverse-square relational contribution is supplied by the generator; it is not derived by the experiment. No claim about physical dark matter or gravity follows.
