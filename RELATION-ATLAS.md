@@ -1,4 +1,4 @@
-# Ω-DM RELATION ATLAS v0.2
+# Ω-DM RELATION ATLAS v0.3
 
 Date: 2026-09-11
 Status: ACTIVE RESEARCH INDEX / PARTIAL 73-REPOSITORY SWEEP
@@ -21,7 +21,7 @@ DISTINCTION
   → OBSERVABLE EFFECT
 ```
 
-The strongest recurring pattern is that a connection is being promoted from a passive pointer to a potentially inspectable/stateful object. This appears independently in Ω-Lab relation research and graph tooling.
+A recurring pattern is that a connection is treated as a potentially inspectable/stateful object rather than only a passive pointer.
 
 ## 2. Source atlas
 
@@ -43,7 +43,6 @@ The strongest recurring pattern is that a connection is being promoted from a pa
 | Edge removal | Omega-lab-.--.- | `experiments/Omega-LINK-1/RESULT-003.md` | Local edge loss ≠ fixed global reachability loss | Observed controlled result |
 | Topology | Omega-lab-.--.- | `experiments/Omega-LINK-1/RESULT-001.md` | Same nodes/edge count, different topology → different behavior | Observed controlled result |
 | Graph protocol | Omega-lab-.--.- | `00_CORE/OMEGA_GRAPH_MEMORY_PROTOCOL.md` | Relation records meaningful connection | Protocol |
-| Graph audit | Omega-lab-.--.- | `01_HISTORY/ARCHITECTURE_AUDIT/2026-08-16-NODES-EDGES-GRAPHS-CYCLES.md` | node/edge/relation/graph/cycle/memory chain | Architecture research |
 | Graph index | Omega-lab-.--.- | `Ω-INDEX/README.md` | NODE / EDGE / GRAPH / SOURCE / RESULT | Registry |
 | Propagation | Omega-lab-.--.- | `research/RELATIONS/STRUCTURE-AND-PROPAGATION.md` | Structure and propagation | Research |
 | Emergence | Omega-lab-.--.- | `research/RELATIONS/experiments/OMEGA-MEDIUM-001-EMERGENT-LOCALIZED-STRUCTURES.md` | Emergent localized structures | Experiment |
@@ -55,97 +54,52 @@ The strongest recurring pattern is that a connection is being promoted from a pa
 | Physicalized relation | ORISIK | `04_EXPERIMENTS/PHYSICALIZED_RELATION_MEMORY_PHASEFIELD_v0.1.md` | phase-field representation of relation memory | Toy/experimental |
 | Gravity branch | ORISIK | `05_RESEARCH/ORGANISM/BLACK_HOLE_RELATION_INFORMATION_HYPOTHESIS_v0.1.md` | relation/information hypothesis for black holes | Hypothesis |
 | Light/medium | ORISIK | `05_RESEARCH/LIGHT_AS_INFORMATION_MEDIUM_v0.1.md` | signal → propagation → interaction → state change | Hypothesis/experiment |
-| Light/medium | ORISIK | `05_RESEARCH/LIGHT_MEDIUM_MEMORY_SIM_v0.1.md` | propagation + medium + memory | Toy model |
 | Relation physics | Omega-lab-.--.- | `research/RELATIONS/experiments/OMEGA-PHYS-ELECTRON-002.md` | cross-check relation language against QED interaction | Physics cross-check |
-| Physics cross-check | Omega-lab-.--.- | `research/RELATIONS/experiments/OMEGA-PHYS-CROSSCHECK-001.md` | algebraic relation classes vs first-generation fermion charge structure | Open hypothesis / controlled comparison |
-| Relation governance | ORISIK | `08_LINKS/VERIFIED_EDGES.md` | only evidence-backed links enter verified-edge register | Verified evidence |
-| Organ relation matrix | ORISIK | `08_LINKS/ORGAN_RELATION_MATRIX.md` | canonical semantic organ-to-organ relation map | Semantic / not yet fully verified |
-| Standard registry | ORISIK | `STANDARDS/STANDARD_REGISTRY_v0.1.md` | classifies foundation, protocols, evidence and relation registry objects | Registry |
+| Physics cross-check | Omega-lab-.--.- | `research/RELATIONS/experiments/OMEGA-PHYS-CROSSCHECK-001.md` | algebraic relation classes vs particle charge bookkeeping | Open hypothesis / controlled comparison |
+| Relation governance | ORISIK | `08_LINKS/VERIFIED_EDGES.md` | evidence-backed links only | Verified evidence |
+| Organ relation matrix | ORISIK | `08_LINKS/ORGAN_RELATION_MATRIX.md` | semantic organ relation map | Semantic / not fully verified |
+| Standard registry | ORISIK | `STANDARDS/STANDARD_REGISTRY_v0.1.md` | classification and registry | Registry |
+| Physical branch | LIGHT- | `FULL_LIGHT_RUN.md` | propagation, field, connection, curvature, energy/momentum, boundary, interaction | Computational compatibility |
+| Physical mapping | LIGHT- | `OMEGA_MAPPING.md` | element ↔ degree of freedom; connection ↔ interaction/correlation | Mapping / not derivation |
+| Fundamental physical domains | MASSA- | `README.md` | mass as state/interaction/structure property | Research domain |
+| Fundamental physical domains | MATTER-ENERGY- | `README.md` | matter-energy relation via state, interaction, transfer, transition | Research domain |
+| Fundamental physical domains | FIELD- | `README.md` | distributed physical state and interactions in space | Research domain |
+| Fundamental physical domains | INTERACTION-- | `README.md` | mutual state/energy/information/relation change | Research domain |
+| Fundamental physical domains | WAVE-- | `README.md` | propagation of state/energy/information changes | Research domain |
+| Fundamental physical domains | ENTROPY-- | `README.md` | state distribution and reversibility constraints | Research domain |
+| Fundamental physical domains | MOTION- | `README.md` | state/position/relation change over time | Research domain |
+| Fundamental physical domains | SPACE---TIME- | `README.md` | space-time as connected state/change structures | Research domain |
+| Fundamental physical domains | STRUCTURE-- | `README.md` | elements + relations + boundaries + stable states | Research domain |
+| Fundamental physical domains | CHARGE-- | `README.md` | charge, electrical interaction, transfer, distribution | Research domain |
+| Gravity domain | GRAVITY-- | `README.md` | gravity, mass, spacetime geometry, interactions | Research domain |
 | Relation/DM bridge | OMEGA-DARK-MATTER | `RELATION-MAP.md` | relation → effective dynamics → gravity observable | Open hypothesis |
+| Quantitative bridge | OMEGA-DARK-MATTER | `RELATION-STATE-MODEL-v0.1.md` | minimal common state/update representation | Model candidate |
 
-## 3. Relation governance discovered in ORISIK
+## 3. Governance: semantic link ≠ verified link
 
-ORISIK adds an important distinction to the research map: a relation is not considered verified merely because it is semantically plausible.
+ORISIK's relation infrastructure makes an important distinction. The standard registry defines `VERIFIED` as a status requiring concrete evidence, while `MAPPED` and `ARCHITECTURAL` are weaker states. The verified-edge register currently contains only a small set of evidence-backed links and explicitly says that absence from the register does not mean a thematic relation is absent. fileciteturn154file0
 
-The current verified-edge register contains only links with a concrete basis, including an exact SHA-verified source/target preservation relation and an explicitly provenance-bearing transformed copy. It also states that absence from the verified list means only that verification has not yet occurred, not that a thematic relation is absent. 
+The organ relation matrix labels current connections `S` for semantic relation and reserves `V` for independently verified relations. It explicitly warns that this is a relation matrix, not an identity matrix. fileciteturn155file0
 
-The organ relation matrix currently labels its connections `S` for semantic relation, while reserving `V` for separately verified relations. It explicitly says the matrix is a relation map, not an identity map, and that evidence/status must be added before a relation becomes `LINKED/VERIFIED`.
+The relation evidence register similarly distinguishes `MAPPED`, `ARCHITECTURAL`, and `VERIFIED`, with `VERIFIED` reserved for required concrete evidence. fileciteturn157file0
 
-This gives the atlas a useful three-state discipline:
+Therefore the atlas uses:
 
 ```text
-SEMANTIC RELATION
-      ↓ evidence/provenance check
-LINKED / VERIFIED
-      ↓ scientific or operational validation where applicable
+SEMANTIC / ARCHITECTURAL
+        ↓ evidence + provenance
+MAPPED / LINKED
+        ↓ verification procedure
+VERIFIED
+        ↓ domain-specific validation
 VALIDATED CLAIM
 ```
 
-These states must not be collapsed into one another.
+These levels must not be collapsed.
 
-## 4. Important controlled findings already present
+## 4. Unified physical-variable chain
 
-### 4.1 Topology matters
-
-Ω-LINK-1 records controlled graphs with the same nodes and edge count but different edge placement producing different structural behavior. This is evidence about the tested graph model, not a universal physical law.
-
-### 4.2 Direction matters
-
-A recorded controlled result shows that reversing an edge can change reachable-state structure while keeping node and edge counts unchanged. Therefore an undirected scalar edge is not generally sufficient for directed transition systems.
-
-### 4.3 Edge importance is contextual
-
-Removing one edge always removes its immediate transition, but the global reachability loss can be zero, partial, or larger depending on alternative paths. Thus relation significance is a property of relation + surrounding topology, not of the edge in isolation.
-
-### 4.4 Relation memory is an explicit branch
-
-ORISIK contains a computational experiment with relational edges, local relation memory, dissipation, capacity thresholds and endogenous relation breaking. This is important because it links relation state to persistence and restructuring without silently calling the result physical law.
-
-### 4.5 Propagation is separate from memory
-
-The light/medium work contains a limiting result: propagation plus dissipation alone did not guarantee persistent relational memory in the tested damped-oscillator model. A memory-bearing/adaptive mechanism therefore cannot simply be assumed from propagation.
-
-### 4.6 Physics cross-check: algebraic agreement is not physical derivation
-
-The Ω-PHYS-CROSSCHECK-001 document tests a common charge unit `q0 = e/3` against the established first-generation fermion charges and checks the proton/neutron charge sums. The arithmetic is consistent with the proposed bookkeeping, but the source explicitly classifies the interpretation as a hypothesis and warns that integer charge decomposition does not demonstrate physical constituents or substructure.
-
-The required next control is stronger: construct the Ω interaction/transition table independently, without importing particle names or known particle charges, then compare both matches and contradictions against established interaction properties. The current status remains OPEN.
-
-## 5. Minimal common variable set
-
-The current source family suggests a candidate common state representation:
-
-```text
-G(t) = (V, E(t), S_V(t), S_E(t))
-```
-
-where:
-- `V` = distinguishable entities/nodes;
-- `E(t)` = relations and their topology at time `t`;
-- `S_V(t)` = node/entity state;
-- `S_E(t)` = relation/edge state.
-
-Candidate edge variables:
-
-```text
-existence
-orientation
-strength
-stiffness
-geometry
-capacity
-latency
-persistence
-memory
-energy cost
-breaking threshold
-```
-
-These are candidate operational variables, not established fundamental physical quantities.
-
-## 6. Cross-domain physical branch
-
-The strongest current cross-domain abstraction is:
+The cross-repository sweep now gives a more precise candidate chain:
 
 ```text
 ENTITY / STATE
@@ -160,104 +114,124 @@ TRANSITION / PROPAGATION
       ↓
 PERSISTENT TRACE OR RESTRUCTURING
       ↓
-OBSERVABLE
-```
-
-Examples already present in the repository family include:
-
-```text
-light → medium interaction → persistent local change
-entity → relation change → changed system state
-relation memory → reinforcement/breaking → topology change
-charge/state → interaction → transition
-```
-
-For the Ω-DM branch, the unresolved physical step remains:
-
-```text
-hidden relational state
-      ↓
-specified interaction/update law
-      ↓
-effective gravitational dynamics
-      ↓
-rotation curves / lensing / structure observables
-      ↓
-comparison with ΛCDM + baryonic baselines
-      ↓
-falsification / held-out prediction
-```
-
-The existence of analogous relation structures in digital, organizational, biological or physical descriptions does not by itself establish physical equivalence.
-
-## 7. The critical scientific bridge
-
-The research can now be reduced to one testable bridge:
-
-```text
-RELATION STATE
-      ↓
-INTERACTION LAW
-      ↓
-NETWORK / FIELD DYNAMICS
-      ↓
-EFFECTIVE CONTRIBUTION
+FIELD / COARSE-GRAINED DESCRIPTION
       ↓
 OBSERVABLE
 ```
 
-For Ω-DM, the minimum viable scientific model should therefore specify:
+The corresponding abstract state candidate is:
 
-1. state variables and units;
-2. relation variables and units;
-3. interaction/update law;
-4. initial/boundary conditions;
-5. free and fixed parameters;
-6. baseline models;
-7. observables and error model;
-8. complexity penalty;
-9. held-out validation;
-10. falsification tests.
+```text
+G(t) = (V, E(t), S_V(t), S_E(t))
+```
 
-Nothing in the current atlas establishes that this bridge works physically. That is precisely the experiment still required.
+with candidate edge variables such as existence, orientation, strength, stiffness, geometry, capacity, latency, persistence, memory, energy cost and breaking threshold.
 
-## 8. Provenance links
+These are model variables, not established fundamental physical quantities.
 
-- [Ω-Lab RELATIONS](https://github.com/SmartVoltISA/Omega-lab-.--.-/tree/main/research/RELATIONS)
-- [Ω-LINK-1](https://github.com/SmartVoltISA/Omega-lab-.--.-/tree/main/experiments/Omega-LINK-1)
-- [Ω graph memory protocol](https://github.com/SmartVoltISA/Omega-lab-.--.-/blob/main/00_CORE/OMEGA_GRAPH_MEMORY_PROTOCOL.md)
-- [Ω edge model](https://github.com/SmartVoltISA/Omega-lab-.--.-/blob/main/tools/graph_memory_inspector/EDGE_MODEL.md)
-- [ORISIK verified edges](https://github.com/SmartVoltISA/ORISIK/blob/main/08_LINKS/VERIFIED_EDGES.md)
-- [ORISIK organ relation matrix](https://github.com/SmartVoltISA/ORISIK/blob/main/08_LINKS/ORGAN_RELATION_MATRIX.md)
-- [ORISIK standard registry](https://github.com/SmartVoltISA/ORISIK/blob/main/STANDARDS/STANDARD_REGISTRY_v0.1.md)
-- [ORISIK relation research](https://github.com/SmartVoltISA/ORISIK/tree/main/05_RESEARCH/ORGANISM)
-- [ORISIK experiments](https://github.com/SmartVoltISA/ORISIK/tree/main/04_EXPERIMENTS)
-- [Ω-DM relation map](https://github.com/SmartVoltISA/OMEGA-DARK-MATTER/blob/main/RELATION-MAP.md)
+## 5. What the physical branches add
+
+### LIGHT
+
+The full LIGHT run gives the strongest computationally quantified example in the current sweep. It reports relation-based wave propagation, Maxwell discretization, gauge-covariant link structure, curvature, dispersion, polarization, energy-momentum consistency and boundary response. It explicitly concludes that this supports structural compatibility and computational representation, not derivation of electromagnetism from Ω. fileciteturn147file0
+
+The LIGHT mapping also explicitly states that an element may correspond to a physical degree of freedom, a connection to an interaction/correlation, a boundary to a distinction of accessible states, and change to state dynamics — while requiring mathematical mapping and experimental consequences rather than relying on terminology. fileciteturn140file0
+
+### MASS / MATTER-ENERGY / FIELD / INTERACTION / WAVE / MOTION / STRUCTURE
+
+The neighboring fundamental repositories independently frame their domains around state, relations, interaction, transfer, propagation, structure and change. `MASSA-` treats mass as a property of state, interaction and matter structure; `MATTER-ENERGY-` explicitly studies matter-energy relations through states, interactions, transfers and transitions; `FIELD-` treats field as a distributed physical state and interaction description; `INTERACTION--` treats interaction as mutual change in state, energy, information and relations; `WAVE--` treats waves as propagation of changes in state, energy and information; `STRUCTURE--` treats structure as organization of elements, relations, boundaries and stable states. fileciteturn130file0 fileciteturn136file0 fileciteturn142file0 fileciteturn143file0 fileciteturn144file0 fileciteturn131file0
+
+`SPACE---TIME-` frames space and time as connected structures of state, motion, distance, duration and change, while `MOTION-` explicitly treats motion as change in state, position and relations over time. fileciteturn128file0 fileciteturn148file0
+
+`CHARGE--` links charge to electrical interaction, transfer and distribution, while `ENTROPY--` keeps state distribution and reversibility constraints distinct from information measures and requires defined conditions. fileciteturn132file0 fileciteturn145file0
+
+`GRAVITY--` is deliberately scoped to gravity, mass, spacetime geometry and interactions, with quantitative separation of observation, interpretation and model. fileciteturn126file0
+
+## 6. Important controlled findings already present
+
+### 6.1 Topology matters in the tested graph model
+
+Ω-LINK-1 records controlled graphs where identical node and edge counts can still produce different structural behavior when edge placement differs. This is evidence about the tested transition system, not a universal physical law.
+
+### 6.2 Direction matters
+
+A controlled result shows that reversing an edge can change reachable-state structure while node and edge counts remain unchanged.
+
+### 6.3 Relation importance is contextual
+
+Removing one edge always removes its immediate transition, but global reachability loss varies with alternative paths. Relation significance therefore depends on relation + surrounding topology.
+
+### 6.4 Memory requires an explicit mechanism
+
+ORISIK contains relation-memory experiments, but also a limiting result in which propagation plus dissipation did not by itself guarantee persistent relational memory. Memory cannot be assumed from propagation alone.
+
+## 7. Ω-DM quantitative bridge
+
+The dedicated model candidate is now recorded in:
+
+`OMEGA-DARK-MATTER/RELATION-STATE-MODEL-v0.1.md`
+
+The intended bridge is:
+
+```text
+S_E(t), S_V(t)
+      ↓
+F_E, F_V
+      ↓
+coarse-grained relational state ρ_R(x,t)
+      ↓
+effective dynamics
+      ↓
+gravity observables
+```
+
+The critical unresolved quantity is not the existence of relations. It is the **explicit interaction/update law** that would turn relational state into a measurable effective gravitational contribution.
+
+Until `F_E`, `F_V`, the coarse-graining operator, units and observational mapping are specified, Ω-DM remains a hypothesis/model programme rather than a physical explanation.
+
+## 8. Derivation barriers
+
+The LIGHT run identifies hard missing structures including exact U(1), spacetime dimension/signature, unique Maxwell kinetic invariant, numerical alpha, quantum commutation/bosonic quantization, exact photon helicity representation, QED corrections and matter charge spectrum. fileciteturn147file0
+
+A separate spacetime branch also shows why `DISTINCTION + RELATION + ORDER + BOUNDARY + LOCALITY` cannot simply be declared equivalent to Lorentzian spacetime: the derivation remains an open problem.
+
+For Ω-DM the analogous missing bridge is:
+
+```text
+relational state → gravitational field equation
+```
+
+No current source in the sweep establishes this derivation.
 
 ## 9. Current audit status
 
 Completed in this pass:
+
 - inspected ORISIK standard registry;
 - inspected ORISIK verified-edge register;
 - inspected ORISIK organ relation matrix;
-- inspected Ω-PHYS-CROSSCHECK-001;
-- incorporated governance distinction between semantic and verified relations;
-- incorporated physics-control distinction between algebraic agreement and physical derivation.
+- inspected ORISIK relation evidence register;
+- added LIGHT full physical run to the atlas;
+- added LIGHT Ω mapping;
+- added MASSA / MATTER-ENERGY / FIELD / INTERACTION / WAVE / MOTION / SPACE-TIME / STRUCTURE / CHARGE / ENTROPY / GRAVITY domain anchors;
+- created `RELATION-STATE-MODEL-v0.1.md` as a quantitative model candidate;
+- preserved the distinction between semantic, verified and scientifically validated relations.
 
 Still required before calling the atlas exhaustive:
+
 - repository-by-repository sweep of all 73 repositories;
-- search for equivalent concepts not using relation/edge terminology;
-- systematic scan of the 19 fundamental-concept repositories;
-- full read of the highest-value physical branches;
-- deduplication and conflict/reconciliation pass;
-- quantitative extraction of experiment parameters and results.
+- equivalent-concept search beyond relation/edge vocabulary;
+- systematic full-file scan of the remaining fundamental repositories;
+- extraction of all quantitative experiment parameters and results;
+- conflict/deduplication/reconciliation pass;
+- implementation of synthetic Ω-DM-001 with null, recovery, permutation and held-out controls.
 
-## 10. Rule
-
-Do not merge an architectural relation, graph-model relation, biological relation, economic relation and physical interaction into one category merely because they share the word "relation". They may be mathematically analogous, but equivalence must be demonstrated.
+## 10. Non-negotiable rule
 
 ```text
 ARCHITECTURE ≠ MODEL ≠ HYPOTHESIS ≠ OBSERVED RESULT ≠ PHYSICAL VALIDATION
 SEMANTIC LINK ≠ VERIFIED LINK ≠ VALIDATED SCIENTIFIC CLAIM
 ALGEBRAIC AGREEMENT ≠ PHYSICAL DERIVATION
 ```
+
+The purpose of this atlas is to make the next test sharper, not to declare the theory solved.
