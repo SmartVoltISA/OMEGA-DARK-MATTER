@@ -24,7 +24,6 @@ def kernel(dx):
 
 def make_graph(n, rng):
     w = [[0.0] * n for _ in range(n)]
-    # Fixed sparse weighted relation state; generation rule is explicit.
     for i in range(n):
         for j in range(i + 1, n):
             if abs(i - j) <= 3:
@@ -35,15 +34,14 @@ def make_graph(n, rng):
 
 
 def permute_graph(w, rng):
+    """Destroy endpoint topology while preserving edge count and weight multiset."""
     n = len(w)
     weights = [w[i][j] for i in range(n) for j in range(i + 1, n) if w[i][j] > 0]
-    pairs = [(i, j) for i in range(n) for j in range(i + 1, n) if w[i][j] > 0]
+    all_pairs = [(i, j) for i in range(n) for j in range(i + 1, n)]
+    pairs = rng.sample(all_pairs, len(weights))
     rng.shuffle(weights)
     out = [[0.0] * n for _ in range(n)]
-    # Preserve number of edges and weight multiset, but destroy endpoint assignment.
-    shuffled_pairs = pairs[:]
-    rng.shuffle(shuffled_pairs)
-    for (i, j), value in zip(shuffled_pairs, weights):
+    for (i, j), value in zip(pairs, weights):
         out[i][j] = value
         out[j][i] = value
     return out
@@ -73,7 +71,6 @@ def generate(radii, rho, rng, lam):
 
 
 def fit_a(radii, y, relation=None):
-    # Linear least squares for y = A*x0 + lambda*x1.
     x0 = [r / (r + EPS) ** 2 for r in radii]
     if relation is None:
         num = sum(a * b for a, b in zip(x0, y))
@@ -104,14 +101,19 @@ def rmse(radii, y, relation, A, lam):
 def run_once(seed=SEED, lam=LAMBDA_TRUE, use_permuted=False):
     rng = random.Random(seed)
     radii = [0.5 + 0.10 * i for i in range(N)]
-    graph = make_graph(N, rng)
+    generating_graph = make_graph(N, rng)
+    true_rho = rho_relation(radii, generating_graph)
+    y = generate(radii, true_rho, rng, lam)
+
+    # The permutation is used only by the fitted model. The observations are
+    # always generated from the original topology; otherwise the control is invalid.
+    model_rho = true_rho
     if use_permuted:
-        graph = permute_graph(graph, rng)
-    rho = rho_relation(radii, graph)
-    y = generate(radii, rho, rng, lam)
+        model_rho = rho_relation(radii, permute_graph(generating_graph, rng))
+
     train_r, test_r = radii[:TRAIN_N], radii[TRAIN_N:]
     train_y, test_y = y[:TRAIN_N], y[TRAIN_N:]
-    train_rho, test_rho = rho[:TRAIN_N], rho[TRAIN_N:]
+    train_rho, test_rho = model_rho[:TRAIN_N], model_rho[TRAIN_N:]
     A0, _ = fit_a(train_r, train_y)
     A1, l1 = fit_a(train_r, train_y, train_rho)
     e0 = rmse(test_r, test_y, test_rho, A0, None)
