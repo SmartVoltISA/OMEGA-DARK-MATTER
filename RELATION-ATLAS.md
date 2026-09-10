@@ -1,4 +1,4 @@
-# Ω-DM RELATION ATLAS v0.1
+# Ω-DM RELATION ATLAS v0.2
 
 Date: 2026-09-11
 Status: ACTIVE RESEARCH INDEX / PARTIAL 73-REPOSITORY SWEEP
@@ -57,31 +57,61 @@ The strongest recurring pattern is that a connection is being promoted from a pa
 | Light/medium | ORISIK | `05_RESEARCH/LIGHT_AS_INFORMATION_MEDIUM_v0.1.md` | signal → propagation → interaction → state change | Hypothesis/experiment |
 | Light/medium | ORISIK | `05_RESEARCH/LIGHT_MEDIUM_MEMORY_SIM_v0.1.md` | propagation + medium + memory | Toy model |
 | Relation physics | Omega-lab-.--.- | `research/RELATIONS/experiments/OMEGA-PHYS-ELECTRON-002.md` | cross-check relation language against QED interaction | Physics cross-check |
+| Physics cross-check | Omega-lab-.--.- | `research/RELATIONS/experiments/OMEGA-PHYS-CROSSCHECK-001.md` | algebraic relation classes vs first-generation fermion charge structure | Open hypothesis / controlled comparison |
+| Relation governance | ORISIK | `08_LINKS/VERIFIED_EDGES.md` | only evidence-backed links enter verified-edge register | Verified evidence |
+| Organ relation matrix | ORISIK | `08_LINKS/ORGAN_RELATION_MATRIX.md` | canonical semantic organ-to-organ relation map | Semantic / not yet fully verified |
+| Standard registry | ORISIK | `STANDARDS/STANDARD_REGISTRY_v0.1.md` | classifies foundation, protocols, evidence and relation registry objects | Registry |
 | Relation/DM bridge | OMEGA-DARK-MATTER | `RELATION-MAP.md` | relation → effective dynamics → gravity observable | Open hypothesis |
 
-## 3. Important controlled findings already present
+## 3. Relation governance discovered in ORISIK
 
-### 3.1 Topology matters
+ORISIK adds an important distinction to the research map: a relation is not considered verified merely because it is semantically plausible.
+
+The current verified-edge register contains only links with a concrete basis, including an exact SHA-verified source/target preservation relation and an explicitly provenance-bearing transformed copy. It also states that absence from the verified list means only that verification has not yet occurred, not that a thematic relation is absent. 
+
+The organ relation matrix currently labels its connections `S` for semantic relation, while reserving `V` for separately verified relations. It explicitly says the matrix is a relation map, not an identity map, and that evidence/status must be added before a relation becomes `LINKED/VERIFIED`.
+
+This gives the atlas a useful three-state discipline:
+
+```text
+SEMANTIC RELATION
+      ↓ evidence/provenance check
+LINKED / VERIFIED
+      ↓ scientific or operational validation where applicable
+VALIDATED CLAIM
+```
+
+These states must not be collapsed into one another.
+
+## 4. Important controlled findings already present
+
+### 4.1 Topology matters
 
 Ω-LINK-1 records controlled graphs with the same nodes and edge count but different edge placement producing different structural behavior. This is evidence about the tested graph model, not a universal physical law.
 
-### 3.2 Direction matters
+### 4.2 Direction matters
 
 A recorded controlled result shows that reversing an edge can change reachable-state structure while keeping node and edge counts unchanged. Therefore an undirected scalar edge is not generally sufficient for directed transition systems.
 
-### 3.3 Edge importance is contextual
+### 4.3 Edge importance is contextual
 
 Removing one edge always removes its immediate transition, but the global reachability loss can be zero, partial, or larger depending on alternative paths. Thus relation significance is a property of relation + surrounding topology, not of the edge in isolation.
 
-### 3.4 Relation memory is an explicit branch
+### 4.4 Relation memory is an explicit branch
 
 ORISIK contains a computational experiment with relational edges, local relation memory, dissipation, capacity thresholds and endogenous relation breaking. This is important because it links relation state to persistence and restructuring without silently calling the result physical law.
 
-### 3.5 Propagation is separate from memory
+### 4.5 Propagation is separate from memory
 
 The light/medium work contains a limiting result: propagation plus dissipation alone did not guarantee persistent relational memory in the tested damped-oscillator model. A memory-bearing/adaptive mechanism therefore cannot simply be assumed from propagation.
 
-## 4. Minimal common variable set
+### 4.6 Physics cross-check: algebraic agreement is not physical derivation
+
+The Ω-PHYS-CROSSCHECK-001 document tests a common charge unit `q0 = e/3` against the established first-generation fermion charges and checks the proton/neutron charge sums. The arithmetic is consistent with the proposed bookkeeping, but the source explicitly classifies the interpretation as a hypothesis and warns that integer charge decomposition does not demonstrate physical constituents or substructure.
+
+The required next control is stronger: construct the Ω interaction/transition table independently, without importing particle names or known particle charges, then compare both matches and contradictions against established interaction properties. The current status remains OPEN.
+
+## 5. Minimal common variable set
 
 The current source family suggests a candidate common state representation:
 
@@ -113,23 +143,36 @@ breaking threshold
 
 These are candidate operational variables, not established fundamental physical quantities.
 
-## 5. The critical scientific bridge
+## 6. Cross-domain physical branch
 
-The research can now be reduced to one testable bridge:
+The strongest current cross-domain abstraction is:
 
 ```text
-RELATION STATE
+ENTITY / STATE
       ↓
-INTERACTION LAW
+RELATION
       ↓
-NETWORK / FIELD DYNAMICS
+RELATIONAL STATE
       ↓
-EFFECTIVE CONTRIBUTION
+INTERACTION / UPDATE LAW
+      ↓
+TRANSITION / PROPAGATION
+      ↓
+PERSISTENT TRACE OR RESTRUCTURING
       ↓
 OBSERVABLE
 ```
 
-For Ω-DM:
+Examples already present in the repository family include:
+
+```text
+light → medium interaction → persistent local change
+entity → relation change → changed system state
+relation memory → reinforcement/breaking → topology change
+charge/state → interaction → transition
+```
+
+For the Ω-DM branch, the unresolved physical step remains:
 
 ```text
 hidden relational state
@@ -145,28 +188,61 @@ comparison with ΛCDM + baryonic baselines
 falsification / held-out prediction
 ```
 
+The existence of analogous relation structures in digital, organizational, biological or physical descriptions does not by itself establish physical equivalence.
+
+## 7. The critical scientific bridge
+
+The research can now be reduced to one testable bridge:
+
+```text
+RELATION STATE
+      ↓
+INTERACTION LAW
+      ↓
+NETWORK / FIELD DYNAMICS
+      ↓
+EFFECTIVE CONTRIBUTION
+      ↓
+OBSERVABLE
+```
+
+For Ω-DM, the minimum viable scientific model should therefore specify:
+
+1. state variables and units;
+2. relation variables and units;
+3. interaction/update law;
+4. initial/boundary conditions;
+5. free and fixed parameters;
+6. baseline models;
+7. observables and error model;
+8. complexity penalty;
+9. held-out validation;
+10. falsification tests.
+
 Nothing in the current atlas establishes that this bridge works physically. That is precisely the experiment still required.
 
-## 6. Provenance links
+## 8. Provenance links
 
 - [Ω-Lab RELATIONS](https://github.com/SmartVoltISA/Omega-lab-.--.-/tree/main/research/RELATIONS)
 - [Ω-LINK-1](https://github.com/SmartVoltISA/Omega-lab-.--.-/tree/main/experiments/Omega-LINK-1)
 - [Ω graph memory protocol](https://github.com/SmartVoltISA/Omega-lab-.--.-/blob/main/00_CORE/OMEGA_GRAPH_MEMORY_PROTOCOL.md)
 - [Ω edge model](https://github.com/SmartVoltISA/Omega-lab-.--.-/blob/main/tools/graph_memory_inspector/EDGE_MODEL.md)
+- [ORISIK verified edges](https://github.com/SmartVoltISA/ORISIK/blob/main/08_LINKS/VERIFIED_EDGES.md)
+- [ORISIK organ relation matrix](https://github.com/SmartVoltISA/ORISIK/blob/main/08_LINKS/ORGAN_RELATION_MATRIX.md)
+- [ORISIK standard registry](https://github.com/SmartVoltISA/ORISIK/blob/main/STANDARDS/STANDARD_REGISTRY_v0.1.md)
 - [ORISIK relation research](https://github.com/SmartVoltISA/ORISIK/tree/main/05_RESEARCH/ORGANISM)
 - [ORISIK experiments](https://github.com/SmartVoltISA/ORISIK/tree/main/04_EXPERIMENTS)
 - [Ω-DM relation map](https://github.com/SmartVoltISA/OMEGA-DARK-MATTER/blob/main/RELATION-MAP.md)
 
-## 7. Current audit status
+## 9. Current audit status
 
 Completed in this pass:
-- cross-repository search for `relation`;
-- cross-repository search for `connection`;
-- cross-repository search for `edge`;
-- cross-repository search for `interaction`;
-- cross-repository search for `graph`;
-- cross-repository search for `propagation`;
-- relation-heavy source identification and provenance mapping.
+- inspected ORISIK standard registry;
+- inspected ORISIK verified-edge register;
+- inspected ORISIK organ relation matrix;
+- inspected Ω-PHYS-CROSSCHECK-001;
+- incorporated governance distinction between semantic and verified relations;
+- incorporated physics-control distinction between algebraic agreement and physical derivation.
 
 Still required before calling the atlas exhaustive:
 - repository-by-repository sweep of all 73 repositories;
@@ -176,10 +252,12 @@ Still required before calling the atlas exhaustive:
 - deduplication and conflict/reconciliation pass;
 - quantitative extraction of experiment parameters and results.
 
-## 8. Rule
+## 10. Rule
 
 Do not merge an architectural relation, graph-model relation, biological relation, economic relation and physical interaction into one category merely because they share the word "relation". They may be mathematically analogous, but equivalence must be demonstrated.
 
 ```text
 ARCHITECTURE ≠ MODEL ≠ HYPOTHESIS ≠ OBSERVED RESULT ≠ PHYSICAL VALIDATION
+SEMANTIC LINK ≠ VERIFIED LINK ≠ VALIDATED SCIENTIFIC CLAIM
+ALGEBRAIC AGREEMENT ≠ PHYSICAL DERIVATION
 ```
