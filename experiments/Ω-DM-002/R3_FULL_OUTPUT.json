@@ -1,0 +1,54 @@
+{
+  "status": "CERTIFIED_PASS",
+  "implementation": "run_r3_convergent.py",
+  "fixture": {
+    "max_abs_coef_diff": 4.095507266654863e-11,
+    "rss_diff": 5.869082997378428e-11,
+    "solver_success": true
+  },
+  "config": {
+    "seed": 20260911,
+    "N": 24,
+    "train": 40,
+    "test": 20,
+    "length": 80,
+    "K": 0.05,
+    "gamma": 0.02,
+    "sigma": 0.005,
+    "edge_p": 0.12,
+    "lambda_grid": [0.1, 0.3, 1, 3, 10, 30, 100],
+    "null_reps": 20,
+    "temporal_permutation_reps": 20,
+    "solver": "exact convex quadratic factorization + scipy.optimize.nnls under nonnegative L1 objective"
+  },
+  "main": {
+    "baseline_h1": 32.228069219353394,
+    "baseline_h2": 84.61038029086143,
+    "baseline_h5": 312.97217312520036,
+    "baseline_h10": 424.4292656541241,
+    "selected_h1": 18.28492168470156,
+    "selected_h2": 46.70452347805372,
+    "selected_h5": 94.79454571971738,
+    "selected_h10": 142.32102135593578,
+    "lambda": 0.1,
+    "active_edges": 120,
+    "true_edges": 33,
+    "edge_precision": 0.275,
+    "edge_recall": 1.0,
+    "relative_improvement": {"h1": 0.43263986557031425, "h2": 0.44800480369548495, "h5": 0.6971150988500308, "h10": 0.664676701460271}
+  },
+  "controls": {
+    "W0_null": {
+      "n": 20,
+      "mean_h1_improvement": -3.137603565859029e-08,
+      "sd_h1_improvement": 1.4031789719413052e-07,
+      "nonempty_selections": 1
+    },
+    "temporal_permutation": {
+      "n": 20,
+      "mean_h1_improvement": 0.0,
+      "sd_h1_improvement": 0.0,
+      "nonempty_selections": 0
+    }
+  }
+}
