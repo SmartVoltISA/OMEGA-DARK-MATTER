@@ -19,11 +19,18 @@ K(u,v) = 4 - deg(u) - deg(v) + 3*t(u,v).
 
 This is used only as a local relational defect observable. No coordinates, Euclidean distances, target dimension, or physical curvature are supplied.
 
-For each node, use the mean K of its incident edges. The rewiring objective is to reduce the global squared curvature-defect score
+Define the relational defect energy
 
 E_K = mean(K(u,v)^2)
 
-while preserving connectivity and avoiding degree runaway. Candidate rewires are generated from graph distance <=2. A proposed edge swap is accepted only when it decreases E_K and keeps all node degrees between 3 and 10.
+over all edges.
+
+## Dynamics
+Each update is a degree-preserving local 2-switch. Select a non-edge (u,v) at graph distance <=2. Select an existing edge (a,b) such that the proposed replacement removes (u,a) and (v,b) and adds (u,v) and (a,b), with all four nodes distinct and with no duplicate edge created. The switch is accepted only if it preserves connectivity and strictly decreases E_K.
+
+Because the move is a 2-switch, every node degree is preserved exactly. No target degree is supplied.
+
+The candidate scan is deterministic from the current graph ordering; no parameter is tuned to favour d=3.
 
 ## Initial ensembles
 - Erdos-Renyi connected graph, p=0.045
@@ -33,17 +40,12 @@ while preserving connectivity and avoiding degree runaway. Candidate rewires are
 N=500, six seeds per ensemble.
 
 ## Blind measurement
-After dynamics, randomly permute node labels. Measure shell population C(r) using shortest-path distance only, from eight random sources per realization. Fit log C(r) versus log r over an automatically selected interior range with at least four nonzero shells and report the fitted d_eff, shell-fit residual, graph diameter, degree statistics, and E_K.
+After dynamics, randomly permute node labels. Measure shell population C(r) using shortest-path distance only, from eight random sources per realization. Fit log C(r) versus log r over an automatically selected interior range with at least four nonzero shells and excluding the final shell. Report d_eff, shell-fit residual, graph diameter, degree statistics, and E_K.
 
 No coordinate embedding is used.
 
 ## Acceptance
-H1 requires:
-1. d_eff near 3 across multiple seeds;
-2. low seed-to-seed dispersion;
-3. stable shell scaling rather than a single-shell crossover;
-4. consistency across at least two initial ensembles;
-5. no use of d=3 in the dynamics or measurement window selection.
+H1 requires d_eff near 3 across multiple seeds, low seed-to-seed dispersion, stable shell scaling, and consistency across at least two initial ensembles. A single favourable seed or narrow finite-size crossover is insufficient.
 
 ## Scope
 A positive result would establish only that this specified coordinate-free graph dynamics selects a 3D-like relational metric. It would not establish physical spacetime, gravity, or dark matter.
