@@ -6,7 +6,7 @@ The solver uses sufficient statistics and an exact quadratic factorization;
 NNLS solves the resulting non-negative quadratic program. No standardization
 or intercept is used.
 """
-import json, math, random, platform, sys, time
+import json, math, random, platform, sys
 import numpy as np
 from scipy.optimize import nnls
 
@@ -26,17 +26,6 @@ def graph(n,p,seed):
 
 def trajectory(W,seed):
  r=random.Random(seed); x=np.array([r.uniform(-1,1) for _ in range(N)]); v=np.array([r.uniform(-.2,.2) for _ in range(N)]); out=np.empty((LENGTH,N)); out[0]=x
- for _ in range(LENGTH-1):
-  c=((x[:,None]-x[None,:])*W).sum(axis=1)
-  x=x+v; v=v-K*c-GAMMA*v+np.array([r.gauss(0,SIGMA) for _ in range(N)])
-  out[np.where(np.isnan(out))[0][0] if False else 0]=out[0] if False else out[0]
-  # overwritten below to avoid changing the reference arithmetic
- # regenerate deterministically with explicit indexing
- x=np.array([r.uniform(-1,1) for _ in range(N)]) if False else None
- return _trajectory_reference(W,seed)
-
-def _trajectory_reference(W,seed):
- r=random.Random(seed); x=np.array([r.uniform(-1,1) for _ in range(N)]); v=np.array([r.uniform(-.2,.2) for _ in range(N)]); out=np.empty((LENGTH,N)); out[0]=x
  for t in range(LENGTH-1):
   c=((x[:,None]-x[None,:])*W).sum(axis=1)
   x=x+v; v=v-K*c-GAMMA*v+np.array([r.gauss(0,SIGMA) for _ in range(N)])
@@ -54,7 +43,7 @@ def sufficient_stats(trajs):
 
 def fit_lambda(G,b,yty,lam):
  vals,U=np.linalg.eigh(G); keep=vals>1e-10
- A=(np.sqrt(vals[keep])[:,None]*U[:,keep].T)
+ A=np.sqrt(vals[keep])[:,None]*U[:,keep].T
  c=b-lam; q=(U[:,keep].T@c)/np.sqrt(vals[keep])
  w,_=nnls(A,q,maxiter=100000)
  rss=float(yty-2*w@b+w@G@w)
@@ -83,7 +72,7 @@ def rmse(trajs,W,h):
 
 def evaluate(seed,null=False,temporal_perm=False):
  trueW=graph(N,EDGE_P,seed); gen=np.zeros((N,N)) if null else trueW
- train=[_trajectory_reference(gen,seed+1000+i) for i in range(TRAIN_TRAJ)]; test=[_trajectory_reference(gen,seed+2000+i) for i in range(TEST_TRAJ)]
+ train=[trajectory(gen,seed+1000+i) for i in range(TRAIN_TRAJ)]; test=[trajectory(gen,seed+2000+i) for i in range(TEST_TRAJ)]
  if temporal_perm:
   for i,tr in enumerate(train):
    rr=random.Random(seed+5000+i); idx=list(range(len(tr))); rr.shuffle(idx); train[i]=tr[idx]
