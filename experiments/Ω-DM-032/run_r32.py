@@ -24,36 +24,29 @@ def curvature_data(G):
     return K,total/max(1,G.number_of_edges())
 
 
-def energy(G):
-    return curvature_data(G)[1]
+def energy(G): return curvature_data(G)[1]
 
 
 def relax(G, steps=60):
-    G=G.copy(); n=len(G); rng=np.random.default_rng(12345)
+    G=G.copy(); n=len(G)
     for _ in range(steps):
         base=energy(G); best=None; bestE=base
-        nodes=list(G.nodes())
-        # deterministic candidate pool from local distance-two relations
-        candidates=[]
+        nodes=list(G.nodes()); candidates=[]
         for u in nodes:
             d=nx.single_source_shortest_path_length(G,u,cutoff=2)
             for v in d:
-                if u<v and u!=v and not G.has_edge(u,v):
-                    candidates.append((u,v))
-        candidates=sorted(candidates)
-        edges=list(G.edges())
-        # bounded deterministic scan; candidate edge swap preserves edge count
+                if u<v and u!=v and not G.has_edge(u,v): candidates.append((u,v))
+        candidates=sorted(candidates); edges=list(G.edges())
         for u,v in candidates[::max(1,len(candidates)//180)][:180]:
             if G.degree(u)>=10 or G.degree(v)>=10: continue
-            for a,b in edges[::max(1,len(edges)//80)][:80]:
+            for a,b in edges[::max(1,len(edges)//120)][:120]:
                 if len({u,v,a,b})<4: continue
                 if G.degree(a)<=3 or G.degree(b)<=3: continue
-                if G.has_edge(u,a) or G.has_edge(v,b): continue
-                H=G.copy(); H.remove_edge(a,b); H.add_edge(u,a); H.add_edge(v,b)
-                if nx.is_connected(H):
+                if G.degree(a)-1<3 or G.degree(b)-1<3: continue
+                H=G.copy(); H.remove_edge(a,b); H.add_edge(u,v)
+                if nx.is_connected(H) and max(dict(H.degree()).values())<=10 and min(dict(H.degree()).values())>=3:
                     e=energy(H)
-                    if e < bestE-1e-12:
-                        bestE=e; best=H
+                    if e < bestE-1e-12: bestE=e; best=H
         if best is None: break
         G=best
     return G
@@ -62,15 +55,12 @@ def relax(G, steps=60):
 def shell_dimension(G,sources):
     vals=[]; rss=[]
     for s in sources:
-        d=nx.single_source_shortest_path_length(G,s)
-        c=np.bincount(list(d.values())); r=np.arange(len(c))
-        # automatic interior window: exclude r=0, require >=4 shells, avoid last shell
+        d=nx.single_source_shortest_path_length(G,s); c=np.bincount(list(d.values())); r=np.arange(len(c))
         mask=(r>=2)&(r<=len(c)-2)&(c>0)
         if mask.sum()<4: continue
-        x=np.log(r[mask]); y=np.log(c[mask]); coef=np.polyfit(x,y,1)
-        pred=np.polyval(coef,x)
+        x=np.log(r[mask]); y=np.log(c[mask]); coef=np.polyfit(x,y,1); pred=np.polyval(coef,x)
         vals.append(float(coef[0])); rss.append(float(np.mean((y-pred)**2)))
-    if not vals: return float('nan'),float('nan')
+    if not vals: return float('nan'),float('nan'),float('nan')
     return float(np.mean(vals)),float(np.std(vals,ddof=1) if len(vals)>1 else 0.0),float(np.mean(rss))
 
 
