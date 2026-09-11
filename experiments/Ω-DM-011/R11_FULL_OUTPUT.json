@@ -1,0 +1,29 @@
+{
+  "status": "FAIL",
+  "n": 40,
+  "primary": {
+    "log_correlation": 0.7455297154629719,
+    "ratio_mean": 0.09823486774578136,
+    "ratio_median": 0.09942950960446116,
+    "ratio_cv": 0.14505752331563004,
+    "h1_pass": false
+  },
+  "shuffled_control": {
+    "log_correlation": 0.07139787619095381,
+    "fails_h1": true
+  },
+  "weight_rescaling": {
+    "0.5": {
+      "mean_ratio": 0.1606759612936933,
+      "median_ratio": 0.16279001312512079,
+      "median_relative_change_vs_primary": 0.6372404306600019,
+      "cv": 0.1184351967318825
+    },
+    "2.0": {
+      "mean_ratio": 0.055312203735130225,
+      "median_ratio": 0.05590409574612748,
+      "median_relative_change_vs_primary": -0.4377514686684204,
+      "cv": 0.16388582143456107
+    }
+  }
+}
