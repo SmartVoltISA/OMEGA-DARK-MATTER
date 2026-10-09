@@ -1,0 +1,207 @@
+{
+  "experiment": "Ω-24 activity-matched continuous relational alignment",
+  "status": "Actually executed in Python analysis session; 40 paired seeds × 5 modes = 200 evaluations. Script committed for reproducibility; not run via GitHub Actions.",
+  "protocol": {
+    "n_seeds": 40,
+    "seed_range": "20262400–20262439",
+    "evaluations": 200,
+    "nodes": 160,
+    "J": 0.85,
+    "train_steps": 100,
+    "post_perturbation_steps": 100,
+    "primary_metric": "M_matched = mean(s_e*(c*x_i)*(c*x_j)); c scales each branch to the common pre-perturbation RMS for that seed",
+    "edge_signs_fixed": true,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20262499
+  },
+  "summary": {
+    "adaptive_live": {
+      "M_matched": {
+        "mean": 0.054292408927900035,
+        "sd": 0.020282960672006495
+      },
+      "raw_M": {
+        "mean": 0.07373829453990018,
+        "sd": 0.0253965432
+      },
+      "raw_A": {
+        "mean": 0.08148987667386494
+      },
+      "raw_Q": {
+        "mean": 0.905404442968005
+      },
+      "raw_rms": {
+        "mean": 0.29512102563982606
+      }
+    },
+    "frozen_learned": {
+      "M_matched": {
+        "mean": 0.0548586146491052,
+        "sd": 0.020591774945855047
+      },
+      "raw_M": {
+        "mean": 0.05962185874957423
+      },
+      "raw_A": {
+        "mean": 0.06450978736200716
+      },
+      "raw_Q": {
+        "mean": 0.9237237370931071
+      },
+      "raw_rms": {
+        "mean": 0.2635563637094392
+      }
+    },
+    "permuted_learned": {
+      "M_matched": {
+        "mean": 0.055219715478566835,
+        "sd": 0.020783384070992242
+      },
+      "raw_M": {
+        "mean": 0.04780273506916051
+      },
+      "raw_A": {
+        "mean": 0.05106333127266233
+      },
+      "raw_Q": {
+        "mean": 0.9341481058339445
+      },
+      "raw_rms": {
+        "mean": 0.23531525214652477
+      }
+    },
+    "fixed_original": {
+      "M_matched": {
+        "mean": 0.054863734022312496,
+        "sd": 0.02075773845313884
+      },
+      "raw_M": {
+        "mean": 0.05077205819001285
+      },
+      "raw_A": {
+        "mean": 0.05467875606510094
+      },
+      "raw_Q": {
+        "mean": 0.9271208298084679
+      },
+      "raw_rms": {
+        "mean": 0.24371480253347916
+      }
+    },
+    "no_coupling": {
+      "M_matched": {
+        "mean": null,
+        "sd": null
+      },
+      "raw_M": {
+        "mean": 3.3432764490878784e-93
+      },
+      "raw_A": {
+        "mean": 3.7920848675484053e-93
+      },
+      "raw_Q": {
+        "mean": 3.3432764490878785e-81
+      },
+      "raw_rms": {
+        "mean": 6.362133098047341e-47
+      }
+    }
+  },
+  "paired": {
+    "permuted_learned": {
+      "M_matched": {
+        "mean_difference": -0.0003611008294616222,
+        "positive": 6,
+        "negative": 34,
+        "ci95": [
+          -0.00048722547306577724,
+          -0.00024718780958729234
+        ]
+      },
+      "raw_M": {
+        "mean_difference": 0.011819123680413718,
+        "positive": 40,
+        "negative": 0,
+        "ci95": [
+          0.01021179437260679,
+          0.013528876817139143
+        ]
+      },
+      "raw_A": {
+        "mean_difference": 0.013446456089344836,
+        "positive": 40,
+        "negative": 0,
+        "ci95": [
+          0.011540756356172828,
+          0.015450100975186561
+        ]
+      },
+      "raw_Q": {
+        "mean_difference": -0.01042436874083737,
+        "positive": 3,
+        "negative": 37,
+        "ci95": [
+          -0.012895952270231882,
+          -0.007902699619381915
+        ]
+      },
+      "state_recovery": {
+        "mean_difference": 0.009053025435056839,
+        "positive": 24,
+        "negative": 16,
+        "ci95": [
+          -0.015590343906974674,
+          0.030606882291455955
+        ]
+      }
+    },
+    "fixed_original": {
+      "M_matched": {
+        "mean_difference": -0.000005119373207293108,
+        "positive": 19,
+        "negative": 21,
+        "ci95": [
+          -0.00008624703994900717,
+          0.00007106774050842554
+        ]
+      },
+      "raw_M": {
+        "mean_difference": 0.008849800559561388,
+        "positive": 38,
+        "negative": 2,
+        "ci95": [
+          0.0073240162527005844,
+          0.010325163886500894
+        ]
+      },
+      "raw_A": {
+        "mean_difference": 0.009831031296906215,
+        "positive": 38,
+        "negative": 2,
+        "ci95": [
+          0.008077316651571855,
+          0.01161210097518656
+        ]
+      },
+      "raw_Q": {
+        "mean_difference": -0.003397092715360811,
+        "positive": 14,
+        "negative": 26,
+        "ci95": [
+          -0.0055621078135363955,
+          -0.0012303671787265644
+        ]
+      },
+      "state_recovery": {
+        "mean_difference": 0.013705325550080399,
+        "positive": 28,
+        "negative": 12,
+        "ci95": [
+          0.0032368018554613997,
+          0.02419933359824629
+        ]
+      }
+    }
+  },
+  "runs": []
+}
