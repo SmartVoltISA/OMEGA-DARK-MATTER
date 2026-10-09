@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "experiment": "Ω-13 network control comparison",
+    "date": "2026-10-09",
+    "N": 120,
+    "k_initial": 8,
+    "rewire_probability": 0.15,
+    "steps": 500,
+    "noise": 0.08,
+    "eta": 0.015,
+    "decay": 0.005,
+    "seeds": "20261020 through 20261039 per mode",
+    "runs_per_mode": 20,
+    "execution_note": "The numerical experiment was executed in the current Python session. The saved script implements the same update rules and parameter values; it was not launched directly from the GitHub checkout in this run.",
+    "model_note": "Toy network dynamics only. It does not model physical matter, and no claim about superluminal propagation is tested."
+  },
+  "summary": {
+    "adaptive": {
+      "edge_sign_agreement_mean": {
+        "mean": 0.9452189469757645,
+        "std": 0.047222482905143894,
+        "min": 0.8718487394957981,
+        "max": 1
+      },
+      "polarization_abs_mean_sign_mean": {
+        "mean": 0.6508333333333334,
+        "std": 0.33361720368783626,
+        "min": 0.1333333333333333,
+        "max": 1
+      },
+      "largest_same_sign_component_fraction": {
+        "mean": 0.8254166666666667,
+        "std": 0.16680860184391813,
+        "min": 0.5666666666666665,
+        "max": 1
+      },
+      "sign_persistence_mean": {
+        "mean": 1,
+        "std": 0,
+        "min": 1,
+        "max": 1
+      },
+      "final_weight_std_mean": 0.3373465630646749
+    },
+    "fixed": {
+      "edge_sign_agreement_mean": {
+        "mean": 0.9952811715481171,
+        "std": 0.021103242385140324,
+        "min": 0.9056234309623429,
+        "max": 1
+      },
+      "polarization_abs_mean_sign_mean": {
+        "mean": 0.9567233333333334,
+        "std": 0.1935391370125318,
+        "min": 0.13446666666666668,
+        "max": 1
+      },
+      "largest_same_sign_component_fraction": {
+        "mean": 0.9783616666666667,
+        "std": 0.09676956850626593,
+        "min": 0.5672333333333333,
+        "max": 1
+      },
+      "sign_persistence_mean": {
+        "mean": 0.9999466666666667,
+        "std": 0.0002385139175999761,
+        "min": 0.9989333333333333,
+        "max": 1
+      },
+      "final_weight_std_mean": 0.14374010350698038
+    },
+    "shuffled": {
+      "edge_sign_agreement_mean": {
+        "mean": 0.9946697286012526,
+        "std": 0.023837698372244098,
+        "min": 0.8933945720250522,
+        "max": 1
+      },
+      "polarization_abs_mean_sign_mean": {
+        "mean": 0.9593033333333333,
+        "std": 0.18200102624863287,
+        "min": 0.18606666666666663,
+        "max": 1
+      },
+      "largest_same_sign_component_fraction": {
+        "mean": 0.9796516666666667,
+        "std": 0.09100051312431645,
+        "min": 0.5930333333333333,
+        "max": 1
+      },
+      "sign_persistence_mean": {
+        "mean": 0.9997716666666667,
+        "std": 0.001021137709724891,
+        "min": 0.9954333333333333,
+        "max": 1
+      },
+      "final_weight_std_mean": 0.14374010350698038
+    },
+    "none": {
+      "edge_sign_agreement_mean": {
+        "mean": 0.5003985666216593,
+        "std": 0.002203005074026978,
+        "min": 0.4966610878661088,
+        "max": 0.5033305439330544
+      },
+      "polarization_abs_mean_sign_mean": {
+        "mean": 0.07246666666666667,
+        "std": 0.004895110342286257,
+        "min": 0.0636,
+        "max": 0.08086666666666667
+      },
+      "largest_same_sign_component_fraction": {
+        "mean": 0.5323933333333334,
+        "std": 0.002420178331837276,
+        "min": 0.527,
+        "max": 0.5359666666666667
+      },
+      "sign_persistence_mean": {
+        "mean": 0.7235033333333334,
+        "std": 0.003458710505748237,
+        "min": 0.7152,
+        "max": 0.7293666666666667
+      },
+      "final_weight_std_mean": null
+    }
+  }
+}
