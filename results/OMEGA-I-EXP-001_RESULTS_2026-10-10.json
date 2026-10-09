@@ -1,0 +1,209 @@
+{
+  "experiment_id": "OMEGA-I-EXP-001",
+  "status": "completed",
+  "execution": "Standalone Python 3 + NumPy run; fixed seeds",
+  "n_trajectories": 100,
+  "train_trajectories": 70,
+  "heldout_test_trajectories": 30,
+  "sequence_length": 400,
+  "burn_in_excluded": 20,
+  "parameters": {
+    "rho": 0.8,
+    "process_noise_sd": 1,
+    "observation_noise_sd": 1,
+    "history_lags": 5
+  },
+  "metrics": {
+    "mean_heldout_rmse": {
+      "current_only_rmse": 1.5809850512218013,
+      "causal_history_5_rmse": 1.5539937197324223,
+      "shuffled_history_5_rmse": 1.9669212632157005
+    },
+    "sd_across_test_trajectories": {
+      "current_only_rmse": 0.034381827261552166,
+      "causal_history_5_rmse": 0.03896972368594362,
+      "shuffled_history_5_rmse": 0.09476494163156285
+    },
+    "paired_rmse_improvement_current_minus_history": 0.026991331489379267,
+    "paired_rmse_improvement_95pct_bootstrap_ci": [
+      0.0217198748376318,
+      0.0320625182953271
+    ],
+    "shuffled_minus_causal_history_mean_rmse": 0.4129275434832782
+  },
+  "model_coefficients": {
+    "current_only": [
+      -0.0010617697696754342,
+      0.5952830375364384
+    ],
+    "causal_history_5": [
+      -0.000850796220314288,
+      0.4606392243059083,
+      0.1617799050218327,
+      0.05415999900518614,
+      0.018626736300237107,
+      0.015486978781837359
+    ],
+    "shuffled_history_5": [
+      -0.0026400375921074295,
+      -0.011859059451283323,
+      0.008010400353960995,
+      0.01108132755306932,
+      -0.0027361138481751153,
+      -0.004993726646198365
+    ]
+  },
+  "per_test_trajectory": {
+    "1070": {
+      "current_only_rmse": 1.6190811332151127,
+      "causal_history_5_rmse": 1.5765329106126955,
+      "shuffled_history_5_rmse": 2.1804066795535975
+    },
+    "1071": {
+      "current_only_rmse": 1.5741194503634337,
+      "causal_history_5_rmse": 1.5435068092871305,
+      "shuffled_history_5_rmse": 2.0552806621547237
+    },
+    "1072": {
+      "current_only_rmse": 1.6024202606439082,
+      "causal_history_5_rmse": 1.572210844040957,
+      "shuffled_history_5_rmse": 1.9194004927744617
+    },
+    "1073": {
+      "current_only_rmse": 1.5557620758521886,
+      "causal_history_5_rmse": 1.5313686941786153,
+      "shuffled_history_5_rmse": 1.9400789313723432
+    },
+    "1074": {
+      "current_only_rmse": 1.5829250412093272,
+      "causal_history_5_rmse": 1.5302642741097323,
+      "shuffled_history_5_rmse": 2.0944784088807604
+    },
+    "1075": {
+      "current_only_rmse": 1.6123715261899871,
+      "causal_history_5_rmse": 1.5754653436471535,
+      "shuffled_history_5_rmse": 1.929741990337444
+    },
+    "1076": {
+      "current_only_rmse": 1.5784149047261673,
+      "causal_history_5_rmse": 1.5426341450893353,
+      "shuffled_history_5_rmse": 1.9554331251968893
+    },
+    "1077": {
+      "current_only_rmse": 1.574192232796331,
+      "causal_history_5_rmse": 1.5503079950499346,
+      "shuffled_history_5_rmse": 1.8700090620787098
+    },
+    "1078": {
+      "current_only_rmse": 1.5943161451411958,
+      "causal_history_5_rmse": 1.5897317435898954,
+      "shuffled_history_5_rmse": 1.9891171164722847
+    },
+    "1079": {
+      "current_only_rmse": 1.587701731639693,
+      "causal_history_5_rmse": 1.5532422732070261,
+      "shuffled_history_5_rmse": 1.9356044078763763
+    },
+    "1080": {
+      "current_only_rmse": 1.6059297619638115,
+      "causal_history_5_rmse": 1.5679864857099461,
+      "shuffled_history_5_rmse": 1.9749343508589505
+    },
+    "1081": {
+      "current_only_rmse": 1.5901126382029123,
+      "causal_history_5_rmse": 1.568274883232232,
+      "shuffled_history_5_rmse": 1.9543258679799944
+    },
+    "1082": {
+      "current_only_rmse": 1.5358530068635075,
+      "causal_history_5_rmse": 1.5196368125037358,
+      "shuffled_history_5_rmse": 1.9239368625263074
+    },
+    "1083": {
+      "current_only_rmse": 1.5859247406798593,
+      "causal_history_5_rmse": 1.573165725873839,
+      "shuffled_history_5_rmse": 1.9162375332297608
+    },
+    "1084": {
+      "current_only_rmse": 1.58655884671926,
+      "causal_history_5_rmse": 1.5483240680722605,
+      "shuffled_history_5_rmse": 1.908460697327444
+    },
+    "1085": {
+      "current_only_rmse": 1.591414344554511,
+      "causal_history_5_rmse": 1.5771482017375924,
+      "shuffled_history_5_rmse": 1.9655244007328028
+    },
+    "1086": {
+      "current_only_rmse": 1.628879164177094,
+      "causal_history_5_rmse": 1.6117081128286155,
+      "shuffled_history_5_rmse": 1.9794334018402855
+    },
+    "1087": {
+      "current_only_rmse": 1.6246472277158248,
+      "causal_history_5_rmse": 1.6377347575068435,
+      "shuffled_history_5_rmse": 2.0726936995814778
+    },
+    "1088": {
+      "current_only_rmse": 1.6364030756307812,
+      "causal_history_5_rmse": 1.6181372812522625,
+      "shuffled_history_5_rmse": 2.032890507490886
+    },
+    "1089": {
+      "current_only_rmse": 1.5874066120852703,
+      "causal_history_5_rmse": 1.5607380340230421,
+      "shuffled_history_5_rmse": 2.071711840800715
+    },
+    "1090": {
+      "current_only_rmse": 1.5154492950636094,
+      "causal_history_5_rmse": 1.4878712269249463,
+      "shuffled_history_5_rmse": 2.00358108618487
+    },
+    "1091": {
+      "current_only_rmse": 1.504928699533225,
+      "causal_history_5_rmse": 1.486740472990649,
+      "shuffled_history_5_rmse": 1.8069474064681943
+    },
+    "1092": {
+      "current_only_rmse": 1.581137087690759,
+      "causal_history_5_rmse": 1.553104162063045,
+      "shuffled_history_5_rmse": 1.8691631291067414
+    },
+    "1093": {
+      "current_only_rmse": 1.5757607136280143,
+      "causal_history_5_rmse": 1.545957286390577,
+      "shuffled_history_5_rmse": 2.0766451978607634
+    },
+    "1094": {
+      "current_only_rmse": 1.5392306372908384,
+      "causal_history_5_rmse": 1.533879796816448,
+      "shuffled_history_5_rmse": 1.870386636078505
+    },
+    "1095": {
+      "current_only_rmse": 1.5598909033603274,
+      "causal_history_5_rmse": 1.5156172450335959,
+      "shuffled_history_5_rmse": 2.093100877445137
+    },
+    "1096": {
+      "current_only_rmse": 1.5397659497800236,
+      "causal_history_5_rmse": 1.4953474411438477,
+      "shuffled_history_5_rmse": 1.818681964570748
+    },
+    "1097": {
+      "current_only_rmse": 1.5295405963478708,
+      "causal_history_5_rmse": 1.4937838804696892,
+      "shuffled_history_5_rmse": 1.8021003696675237
+    },
+    "1098": {
+      "current_only_rmse": 1.5893275129812088,
+      "causal_history_5_rmse": 1.5355860401173405,
+      "shuffled_history_5_rmse": 2.087419410879228
+    },
+    "1099": {
+      "current_only_rmse": 1.640086220607991,
+      "causal_history_5_rmse": 1.6238046444696825,
+      "shuffled_history_5_rmse": 1.90991177914309
+    }
+  },
+  "interpretation": "Synthetic predictive benchmark only; not a test of consciousness, fundamental physics, or personal identity."
+}
