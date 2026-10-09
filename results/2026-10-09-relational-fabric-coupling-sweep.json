@@ -1,0 +1,50 @@
+{
+  "experiment": "Ω-19 coupling-strength sweep",
+  "status": "Executed in Python session: 40 paired seeds, 4 strengths, 4 conditions per strength",
+  "preregistration": "EXPERIMENTS/2026-10-09-relational-fabric-coupling-sweep-preregistration.md",
+  "summary": {
+    "0.25": {
+      "frozen_learned": {"sign_agreement_mean": 0.970546875, "sd": 0.019197224, "state_rms_mean": 2.67532e-27},
+      "permuted_learned": {"sign_agreement_mean": 0.971484375, "sd": 0.017322641},
+      "fixed_original": {"sign_agreement_mean": 0.97078125, "sd": 0.018160470},
+      "no_coupling": {"sign_agreement_mean": 0.499375, "sd": 0.029128294}
+    },
+    "0.6": {
+      "frozen_learned": {"sign_agreement_mean": 0.977890625, "sd": 0.015575040, "state_rms_mean": 0.331299694},
+      "permuted_learned": {"sign_agreement_mean": 0.978046875, "sd": 0.015300927},
+      "fixed_original": {"sign_agreement_mean": 0.9775, "sd": 0.016031569},
+      "no_coupling": {"sign_agreement_mean": 0.499375, "sd": 0.029128294}
+    },
+    "1.0": {
+      "frozen_learned": {"sign_agreement_mean": 0.946796875, "sd": 0.018676237, "state_rms_mean": 0.819479644},
+      "permuted_learned": {"sign_agreement_mean": 0.9528125, "sd": 0.019091442},
+      "fixed_original": {"sign_agreement_mean": 0.951640625, "sd": 0.018303819},
+      "no_coupling": {"sign_agreement_mean": 0.499375, "sd": 0.029128294}
+    },
+    "1.65": {
+      "frozen_learned": {"sign_agreement_mean": 0.92875, "sd": 0.024659135, "state_rms_mean": 0.962058919},
+      "permuted_learned": {"sign_agreement_mean": 0.93421875, "sd": 0.024544631},
+      "fixed_original": {"sign_agreement_mean": 0.938671875, "sd": 0.018422452},
+      "no_coupling": {"sign_agreement_mean": 0.499375, "sd": 0.029128294}
+    }
+  },
+  "paired_bootstrap_10000": {
+    "0.25": {
+      "frozen_minus_fixed": {"mean": -0.000234375, "ci95": [-0.001953125, 0.0015625]},
+      "frozen_minus_permuted": {"mean": -0.0009375, "ci95": [-0.003828125, 0.001796875]}
+    },
+    "0.6": {
+      "frozen_minus_fixed": {"mean": 0.000390625, "ci95": [-0.001484375, 0.0025]},
+      "frozen_minus_permuted": {"mean": -0.00015625, "ci95": [-0.00203125, 0.001328125]}
+    },
+    "1.0": {
+      "frozen_minus_fixed": {"mean": -0.00484375, "ci95": [-0.008203125, -0.001875]},
+      "frozen_minus_permuted": {"mean": -0.006015625, "ci95": [-0.0103125, -0.002109375]}
+    },
+    "1.65": {
+      "frozen_minus_fixed": {"mean": -0.009921875, "ci95": [-0.014140625, -0.0059375]},
+      "frozen_minus_permuted": {"mean": -0.00546875, "ci95": [-0.010234375, -0.0009375]}
+    }
+  },
+  "interpretation": "H1 failed: learned weights did not outperform both controls at any tested coupling strength. At J=1.0 and 1.65 they were significantly worse on paired edge sign agreement. At J=.25 continuous states decayed to nearly zero, weakening the sign-agreement diagnostic."
+}
