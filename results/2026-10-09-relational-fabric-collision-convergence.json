@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "date": "2026-10-09",
+    "experiment": "Ω-10 follow-up: time-step convergence, spatial-resolution convergence, and incoming-speed scan",
+    "equation": "u_tt = u_xx - u*(u^2 - 1)",
+    "method": "Periodic grid, centered second-difference Laplacian, velocity-Verlet update; discrete energy uses forward-difference gradient.",
+    "limitation": "Dimensionless phi^4 toy model with an explicit double-well potential; not a derivation of physical matter or faster-than-light propagation.",
+    "execution_note": "Numerical runs were executed in the current Python session. The committed script is a reproducible implementation but was not executed in-place from GitHub."
+  },
+  "resolution_timestep_sweep": [
+    {
+      "N": 512,
+      "cfl": 0.2,
+      "dt": 0.03125,
+      "steps": 1600,
+      "relative_energy_drift": -0.0000025290715527280775,
+      "walls_t30": [
+        -1.9935035517,
+        1.9935035517
+      ],
+      "wall_count_t35": 0,
+      "center_t35": 1.3090270195,
+      "energy_t35": 1.9217038573
+    },
+    {
+      "N": 512,
+      "cfl": 0.1,
+      "dt": 0.015625,
+      "steps": 3200,
+      "relative_energy_drift": -6.342241379365587e-7,
+      "walls_t30": [
+        -1.9935105237,
+        1.9935105237
+      ],
+      "wall_count_t35": 0,
+      "center_t35": 1.3093948433,
+      "energy_t35": 1.9223491469
+    },
+    {
+      "N": 512,
+      "cfl": 0.05,
+      "dt": 0.0078125,
+      "steps": 6400,
+      "relative_energy_drift": -1.5867612398482489e-7,
+      "walls_t30": [
+        -1.9935122668,
+        1.9935122668
+      ],
+      "wall_count_t35": 0,
+      "center_t35": 1.3094867069,
+      "energy_t35": 1.9225103506
+    },
+    {
+      "N": 1024,
+      "cfl": 0.2,
+      "dt": 0.015625,
+      "steps": 3200,
+      "relative_energy_drift": -6.122101181892756e-7,
+      "walls_t30": [
+        -1.9863979937,
+        1.9863979937
+      ],
+      "wall_count_t35": 0,
+      "center_t35": 1.2735938489,
+      "energy_t35": 1.9229161863
+    },
+    {
+      "N": 1024,
+      "cfl": 0.1,
+      "dt": 0.0078125,
+      "steps": 6400,
+      "relative_energy_drift": -1.5325275439513932e-7,
+      "walls_t30": [
+        -1.9863997775,
+        1.9863997775
+      ],
+      "wall_count_t35": 0,
+      "center_t35": 1.2736887228,
+      "energy_t35": 1.9230830653
+    },
+    {
+      "N": 1024,
+      "cfl": 0.05,
+      "dt": 0.00390625,
+      "steps": 12800,
+      "relative_energy_drift": -3.8325635795318775e-8,
+      "walls_t30": [
+        -1.9864002235,
+        1.9864002235
+      ],
+      "wall_count_t35": 0,
+      "center_t35": 1.2737124358,
+      "energy_t35": 1.92312478
+    }
+  ],
+  "high_resolution_collision_timeline": {
+    "parameters": {
+      "N": 1024,
+      "L": 80,
+      "T": 42,
+      "dt": 0.00390625,
+      "steps": 10752,
+      "x0": 8,
+      "inward_speed": 0.2,
+      "cfl": 0.05
+    },
+    "key_samples": [
+      {
+        "t": 30,
+        "wall_count": 2,
+        "walls": [
+          -1.9864002,
+          1.9864002
+        ],
+        "center": -0.7776,
+        "umin": -0.7776,
+        "umax": 1.0013,
+        "relative_energy_drift": 0
+      },
+      {
+        "t": 32,
+        "wall_count": 2,
+        "walls": [
+          -1.2067533,
+          1.2067533
+        ],
+        "center": -0.40539,
+        "umin": -0.4054,
+        "umax": 1.001,
+        "relative_energy_drift": 2e-7
+      },
+      {
+        "t": 33,
+        "wall_count": 0,
+        "walls": [],
+        "center": 0.14407,
+        "umin": 0.1441,
+        "umax": 1.0009,
+        "relative_energy_drift": 6e-7
+      },
+      {
+        "t": 34,
+        "wall_count": 0,
+        "walls": [],
+        "center": 1.34651,
+        "umin": 0.9989,
+        "umax": 1.3465,
+        "relative_energy_drift": -0.0000079
+      },
+      {
+        "t": 34.5,
+        "wall_count": 0,
+        "walls": [],
+        "center": 1.67968,
+        "umin": 0.9991,
+        "umax": 1.6797,
+        "relative_energy_drift": 0.0000065
+      },
+      {
+        "t": 35,
+        "wall_count": 0,
+        "walls": [],
+        "center": 1.27371,
+        "umin": 0.9991,
+        "umax": 1.3012,
+        "relative_energy_drift": -0.0000072
+      },
+      {
+        "t": 36,
+        "wall_count": 0,
+        "walls": [],
+        "center": 0.21366,
+        "umin": 0.2137,
+        "umax": 1.0205,
+        "relative_energy_drift": 3e-7
+      },
+      {
+        "t": 36.5,
+        "wall_count": 2,
+        "walls": [
+          -0.5632362,
+          0.5632362
+        ],
+        "center": -0.0668,
+        "umin": -0.0668,
+        "umax": 1.0046,
+        "relative_energy_drift": 4e-7
+      },
+      {
+        "t": 37,
+        "wall_count": 2,
+        "walls": [
+          -1.1566964,
+          1.1566964
+        ],
+        "center": -0.25406,
+        "umin": -0.2541,
+        "umax": 1.001,
+        "relative_energy_drift": 2e-7
+      },
+      {
+        "t": 40,
+        "wall_count": 2,
+        "walls": [
+          -2.0687416,
+          2.0687416
+        ],
+        "center": -0.8766,
+        "umin": -0.8766,
+        "umax": 1.0011,
+        "relative_energy_drift": 0
+      }
+    ]
+  },
+  "inward_speed_scan": [
+    {
+      "N": 512,
+      "L": 80,
+      "x0": 8,
+      "speed": 0.1,
+      "T": 168,
+      "dt": 0.015625,
+      "steps": 10752,
+      "initial_energy": 1.8942798029,
+      "final_energy": 1.8942787331,
+      "relative_energy_drift": -5.64750094737842e-7,
+      "min_center": -1.0005438274,
+      "max_center": 1.7032986756,
+      "first_sample_no_walls": 60.25,
+      "last_sample_no_walls": 168,
+      "wall_count_at_final": 0
+    },
+    {
+      "N": 512,
+      "L": 80,
+      "x0": 8,
+      "speed": 0.2,
+      "T": 88,
+      "dt": 0.015625,
+      "steps": 5632,
+      "initial_energy": 1.9225640746,
+      "final_energy": 1.9225603247,
+      "relative_energy_drift": -0.0000019504715122600927,
+      "min_center": -1.0010293722,
+      "max_center": 1.6826428436,
+      "first_sample_no_walls": 33,
+      "last_sample_no_walls": 88,
+      "wall_count_at_final": 0
+    },
+    {
+      "N": 512,
+      "L": 80,
+      "x0": 8,
+      "speed": 0.3,
+      "T": 61.3333333333,
+      "dt": 0.01562632696,
+      "steps": 3925,
+      "initial_energy": 1.9697045274,
+      "final_energy": 1.969702097,
+      "relative_energy_drift": -0.000001233877974791198,
+      "min_center": -1.0408640641,
+      "max_center": 1.6910319812,
+      "first_sample_no_walls": 23.5,
+      "last_sample_no_walls": 26.75,
+      "wall_count_at_final": 2
+    }
+  ]
+}
