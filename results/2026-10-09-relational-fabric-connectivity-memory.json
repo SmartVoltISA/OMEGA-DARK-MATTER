@@ -10,8 +10,9 @@
     "decay": 0.01,
     "seed_range": "20261040–20261059 per mode",
     "runs_per_mode": 20,
-    "execution_note": "The recorded results were generated in the current Python session with the equivalent update equations. The script below includes the corrected frozen-learned protocol and was fetched back from GitHub to verify storage; it was not executed directly from the GitHub checkout during this run.",
-    "note": "Initial four-domain pattern is imposed; this tests memory/recovery, not spontaneous emergence from relations alone."
+    "total_runs": 80,
+    "execution_note": "Corrected protocol was executed in the current Python session with equivalent equations and parameters. The committed script was fetched back from GitHub for storage verification, but was not executed directly from the GitHub checkout.",
+    "note": "Initial four-domain pattern is imposed. This tests memory/recovery, not spontaneous emergence of domains from relations alone."
   },
   "summary": {
     "adaptive_live": {
@@ -54,22 +55,22 @@
     },
     "frozen_learned": {
       "patch_recovery": {
-        "mean": 0.16875,
-        "sd": 0.2476036465593221,
+        "mean": 0.2,
+        "sd": 0.31256578254993406,
         "min": 0,
         "max": 1
       },
       "global_recovery": {
-        "mean": 0.936875,
-        "sd": 0.023022086077686812,
-        "min": 0.89375,
+        "mean": 0.9565625,
+        "sd": 0.018637270772355736,
+        "min": 0.925,
         "max": 1
       },
       "domain_label_retention": {
-        "mean": 0.8896875,
-        "sd": 0.027971069993458372,
-        "min": 0.8375,
-        "max": 0.95
+        "mean": 0.9384375,
+        "sd": 0.020607049604954433,
+        "min": 0.9125,
+        "max": 0.99375
       },
       "baseline_boundaries": {
         "mean": 4.1,
@@ -79,15 +80,15 @@
       },
       "perturbed_boundaries": {
         "mean": 5.9,
-        "sd": 0.7880689256524122,
+        "sd": 0.44721359549995787,
         "min": 4,
-        "max": 8
+        "max": 6
       },
       "learned_weight_std": {
-        "mean": 0.17359544746391034,
-        "sd": 0.0062323004743309535,
-        "min": 0.1629153652892591,
-        "max": 0.18589691533808772
+        "mean": 0.4166964351566837,
+        "sd": 0.03483680256755976,
+        "min": 0.35903597406889204,
+        "max": 0.47060554673026467
       }
     },
     "fixed_original": {
@@ -130,22 +131,22 @@
     },
     "shuffled_learned": {
       "patch_recovery": {
-        "mean": 0.15,
-        "sd": 0.30240265941464967,
+        "mean": 0.21875,
+        "sd": 0.31642274770180145,
         "min": 0,
         "max": 1
       },
       "global_recovery": {
-        "mean": 0.919375,
-        "sd": 0.02816335104537922,
-        "min": 0.8625,
-        "max": 1
+        "mean": 0.9065625,
+        "sd": 0.030040748094090998,
+        "min": 0.825,
+        "max": 0.95625
       },
       "domain_label_retention": {
-        "mean": 0.88375,
-        "sd": 0.030979088872470424,
-        "min": 0.8375,
-        "max": 0.9375
+        "mean": 0.9040625,
+        "sd": 0.02811768910827264,
+        "min": 0.85,
+        "max": 0.94375
       },
       "baseline_boundaries": {
         "mean": 4.1,
@@ -154,57 +155,58 @@
         "max": 6
       },
       "perturbed_boundaries": {
-        "mean": 5.8,
-        "sd": 0.6155870112510924,
+        "mean": 5.9,
+        "sd": 1.020835571068081,
         "min": 4,
-        "max": 6
+        "max": 8
       },
       "learned_weight_std": {
-        "mean": 0.17359544746391034,
-        "sd": 0.0062323004743309535,
-        "min": 0.1629153652892591,
-        "max": 0.18589691533808772
+        "mean": 0.4166964351566837,
+        "sd": 0.03483680256755976,
+        "min": 0.35903597406889204,
+        "max": 0.47060554673026467
       }
     }
   },
   "paired": {
-    "live_vs_frozen_domain_retention": {
-      "mean_difference": 0.0459375,
-      "positive_pairs": 19,
+    "frozen_learned_vs_fixed_original_domain_retention": {
+      "mean_difference": 0.04875,
+      "positive_pairs": 20,
+      "negative_pairs": 0,
+      "ties": 0,
+      "bootstrap_95ci": [
+        0.0365625,
+        0.0615625
+      ]
+    },
+    "adaptive_live_vs_frozen_learned_domain_retention": {
+      "mean_difference": -0.0028125,
+      "positive_pairs": 4,
+      "negative_pairs": 8,
+      "ties": 8,
+      "bootstrap_95ci": [
+        -0.009375,
+        0.003125
+      ]
+    },
+    "frozen_learned_vs_shuffled_learned_domain_retention": {
+      "mean_difference": 0.034375,
+      "positive_pairs": 17,
       "negative_pairs": 1,
+      "ties": 2,
       "bootstrap_95ci": [
-        0.0334375,
-        0.05875
+        0.0234375,
+        0.0459375
       ]
     },
-    "live_vs_frozen_patch_recovery": {
-      "mean_difference": -0.08125,
-      "positive_pairs": 2,
-      "negative_pairs": 7,
-      "ties": 11,
-      "bootstrap_95ci": [
-        -0.1875,
-        0
-      ]
-    },
-    "frozen_vs_fixed_domain_retention": {
-      "mean_difference": 0,
+    "adaptive_live_vs_frozen_learned_patch_recovery": {
+      "mean_difference": -0.1125,
       "positive_pairs": 0,
-      "negative_pairs": 0,
-      "ties": 20,
+      "negative_pairs": 8,
+      "ties": 12,
       "bootstrap_95ci": [
-        0,
-        0
-      ]
-    },
-    "live_vs_shuffled_domain_retention": {
-      "mean_difference": 0.051875,
-      "positive_pairs": 19,
-      "negative_pairs": 0,
-      "ties": 1,
-      "bootstrap_95ci": [
-        0.038125,
-        0.0653203125
+        -0.21875,
+        -0.03125
       ]
     }
   }
