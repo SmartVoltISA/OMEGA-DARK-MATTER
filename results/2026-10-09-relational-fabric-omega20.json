@@ -15,7 +15,7 @@
     "frozen_learned_signed": {"relation_retention":{"mean":-0.042421875,"ci95":[-0.05171875,-0.0328125]},"state_recovery":{"mean":-0.0814306808,"ci95":[-0.0993809544,-0.0648052532]}},
     "permuted_learned_signed": {"relation_retention":{"mean":-0.040078125,"ci95":[-0.05078125,-0.029296875]},"state_recovery":{"mean":-0.0662977447,"ci95":[-0.0861104598,-0.0467743247]}},
     "fixed_unsigned": {"relation_retention":{"mean":-0.050078125,"ci95":[-0.06140625,-0.0388261719]},"state_recovery":{"mean":-0.0520856737,"ci95":[-0.1231015986,0.0142898632]}},
-    "adaptive_unsigned": {"relation_retention":{"mean":-0.0575,"ci95":[-0.069765625,-0.045234375},"state_recovery":{"mean":-0.0605416543,"ci95":[-0.1261665103,0.0016393462]}}
+    "adaptive_unsigned": {"relation_retention":{"mean":-0.0575,"ci95":[-0.069765625,-0.045234375]},"state_recovery":{"mean":-0.0605416543,"ci95":[-0.1261665103,0.0016393462]}}
   },
   "interpretation": "Preregistered hypothesis unsupported. Adaptive signed links underperformed frozen and permuted signed controls on retention and state recovery; unsigned controls showed higher relation retention. No-coupling state decayed toward zero, making its post relation score uninformative."
 }
