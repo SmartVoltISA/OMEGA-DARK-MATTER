@@ -1,0 +1,81 @@
+{
+  "experiment": "Ω-I-EXP-002",
+  "executed_at": "2026-10-10",
+  "execution": "local Python/NumPy execution; no GitHub Actions run",
+  "design": {
+    "conditions": 4,
+    "trajectories_per_condition": 120,
+    "train_trajectories": 70,
+    "test_trajectories": 50,
+    "trajectory_length": 500,
+    "burn_in": 20,
+    "models": [
+      "CURRENT_ONLY OLS",
+      "HISTORY_5 OLS",
+      "SHUFFLED_HISTORY_5 negative control"
+    ],
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20261010
+  },
+  "preregistration": "experiments/OMEGA-I-EXP-002_PREREGISTRATION_2026-10-10.md",
+  "summaries": {
+    "AR1_CONTINUITY": {
+      "rmse_pooled": {
+        "current": 1.5723264966,
+        "history": 1.5431435376,
+        "shuffled": 1.9311961173
+      },
+      "improvement_current_minus_history": 0.0291714801,
+      "bootstrap_95_ci": [
+        0.0256355309,
+        0.032481035
+      ],
+      "current_minus_shuffled_mean": -0.3569976125
+    },
+    "IID_NEGATIVE_CONTROL": {
+      "rmse_pooled": {
+        "current": 1.4207960086,
+        "history": 1.4207799523,
+        "shuffled": 1.4207731954
+      },
+      "improvement_current_minus_history": 0.0000158315,
+      "bootstrap_95_ci": [
+        -0.0001402173,
+        0.0001677671
+      ],
+      "current_minus_shuffled_mean": 0.0000233201
+    },
+    "REGIME_SWITCH": {
+      "rmse_pooled": {
+        "current": 1.9417985192,
+        "history": 1.7084458618,
+        "shuffled": 1.9444470702
+      },
+      "improvement_current_minus_history": 0.2314866516,
+      "bootstrap_95_ci": [
+        0.2136714955,
+        0.2501690705
+      ],
+      "current_minus_shuffled_mean": -0.0025937176
+    },
+    "REPLACEMENT_WITH_PERSISTENT_RULE": {
+      "rmse_pooled": {
+        "current": 1.5774322677,
+        "history": 1.544973787,
+        "shuffled": 1.96031054
+      },
+      "improvement_current_minus_history": 0.0323579851,
+      "bootstrap_95_ci": [
+        0.0280344238,
+        0.0366307834
+      ],
+      "current_minus_shuffled_mean": -0.3810622561
+    }
+  },
+  "caveats": [
+    "Synthetic processes only; not evidence about consciousness, personal identity, dark matter, or fundamental physics.",
+    "History helped on AR(1), regime-switch, and carrier-replacement conditions; it did not help on IID control.",
+    "The replacement condition preserves the same scalar process and transition rule by construction; it does not test identity criteria in real organisms.",
+    "The shuffled-history model's pooled RMSE can be worse than current-only in some conditions because its training feature rows are mismatched with targets; interpret as a corruption control, not a fair alternative model."
+  ]
+}
