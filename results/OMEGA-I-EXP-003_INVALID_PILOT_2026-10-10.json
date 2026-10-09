@@ -1,0 +1,35 @@
+{
+  "experiment": "Ω-I-EXP-003 exploratory pilot",
+  "status": "INVALID AS SCIENTIFIC TEST; target leakage detected",
+  "execution": "local Python",
+  "per_condition_test_rows": 1200,
+  "metrics": {
+    "CONTINUOUS": {
+      "present_auc": 0.8665027778,
+      "organization_auc": 0.9268416667,
+      "history_auc": 0.9943388889
+    },
+    "SNAPSHOT_COPY": {
+      "present_auc": 0.5046361111,
+      "organization_auc": 0.488725,
+      "history_auc": 0.9828916667
+    },
+    "FUNCTION_PRESERVED_REWIRE": {
+      "present_auc": 0.4895027778,
+      "organization_auc": 0.4889972222,
+      "history_auc": 0.9835194444
+    },
+    "SAME_LINEAGE_ELEMENT_REPLACEMENT": {
+      "present_auc": 0.5260805556,
+      "organization_auc": 0.5247583333,
+      "history_auc": 0.9818138889
+    },
+    "IID_CONTROL": {
+      "present_auc": 0.5135944444,
+      "organization_auc": 0.5029611111,
+      "history_auc": 0.5128833333
+    }
+  },
+  "validity_issue": "Feature distributions were sampled conditionally on labels; high history AUC is circular and cannot support Ω-I.",
+  "action": "Archive as invalid pilot; do not treat as evidence. Implement corrected trajectory-first experiment."
+}
