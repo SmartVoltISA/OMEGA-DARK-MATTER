@@ -1,0 +1,83 @@
+{
+  "experiment": "Ω-22 amplitude-gated signed-relation stability",
+  "status": "Executed numerical experiment in Python analysis session",
+  "protocol": {
+    "n_seeds": 40,
+    "nodes": 160,
+    "coupling_J": 0.85,
+    "amplitude_threshold_epsilon": 0.2,
+    "training_steps": 100,
+    "post_perturbation_steps": 100,
+    "perturbation": "invert state sign of first 10% of nodes",
+    "paired_bootstrap_resamples": 10000,
+    "bootstrap_seed": 20262299,
+    "important_note": "The preregistered coverage requirement was >=50%; it was not met. Therefore the primary decision is inconclusive by the preregistered rule."
+  },
+  "summary": {
+    "adaptive_live": {
+      "primary_score": {"mean": 0.9587135966, "sd": 0.0185895539},
+      "coverage": {"mean": 0.3634375, "sd": 0.1273029051},
+      "fraction_runs_coverage_at_least_50pct": 0.125,
+      "relation_retention": {"mean": 0.9996323529, "sd": 0.0023252042},
+      "retention_coverage": {"mean": 0.27890625, "sd": 0.1114596438},
+      "state_recovery": {"mean": 0.7077737834, "sd": 0.1632533919},
+      "pre_rms": {"mean": 0.2522290211, "sd": 0.0472634887},
+      "post_rms": {"mean": 0.2946852603, "sd": 0.0528514944}
+    },
+    "frozen_learned": {
+      "primary_score": {"mean": 0.9693517984, "sd": 0.0160876884},
+      "coverage": {"mean": 0.318203125, "sd": 0.1155023334},
+      "fraction_runs_coverage_at_least_50pct": 0.05,
+      "relation_retention": {"mean": 0.9998106061, "sd": 0.0011978324},
+      "retention_coverage": {"mean": 0.27703125, "sd": 0.1100961801},
+      "state_recovery": {"mean": 0.7539021084, "sd": 0.1743313873},
+      "pre_rms": {"mean": 0.2522290211, "sd": 0.0472634887},
+      "post_rms": {"mean": 0.2648784259, "sd": 0.0462615371}
+    },
+    "permuted_learned": {
+      "primary_score": {"mean": 0.9790414205, "sd": 0.0146543016},
+      "coverage": {"mean": 0.2778125, "sd": 0.0976147829},
+      "fraction_runs_coverage_at_least_50pct": 0.025,
+      "relation_retention": {"mean": 0.9997787611, "sd": 0.0013992379},
+      "retention_coverage": {"mean": 0.244375, "sd": 0.0921340431},
+      "state_recovery": {"mean": 0.7493560319, "sd": 0.1492165739},
+      "pre_rms": {"mean": 0.2522290211, "sd": 0.0472634887},
+      "post_rms": {"mean": 0.237558833, "sd": 0.0429299198}
+    },
+    "fixed_original": {
+      "primary_score": {"mean": 0.9769286069, "sd": 0.0141445122},
+      "coverage": {"mean": 0.29265625, "sd": 0.0966448103},
+      "fraction_runs_coverage_at_least_50pct": 0.05,
+      "relation_retention": {"mean": 0.999795082, "sd": 0.0012960154},
+      "retention_coverage": {"mean": 0.255703125, "sd": 0.0994674509},
+      "state_recovery": {"mean": 0.7496089683, "sd": 0.1570939377},
+      "pre_rms": {"mean": 0.2522290211, "sd": 0.0472634887},
+      "post_rms": {"mean": 0.2444847166, "sd": 0.0405365058}
+    },
+    "no_coupling": {
+      "primary_score": null,
+      "coverage": {"mean": 0.0, "sd": 0.0},
+      "relation_retention": null,
+      "state_recovery": {"mean": 0.5, "sd": 0.0},
+      "post_rms": {"mean": 6.3728778749e-47, "sd": 1.1900917106e-47},
+      "note": "No scoreable edges; state decayed near zero. Excluded from structural interpretation."
+    }
+  },
+  "paired_bootstrap_frozen_learned_minus_control": {
+    "permuted_learned": {
+      "primary_score": {"mean_difference": -0.0096896221, "positive": 10, "negative": 29, "ties": 1, "ci95": [-0.0134958635, -0.005953805]},
+      "relation_retention": {"mean_difference": 0.000031845, "positive": 1, "negative": 0, "ties": 39, "ci95": [0.0, 0.000095535]},
+      "state_recovery": {"mean_difference": 0.0045460766, "positive": 21, "negative": 19, "ties": 0, "ci95": [-0.0068874001, 0.0157883009]}
+    },
+    "fixed_original": {
+      "primary_score": {"mean_difference": -0.0075768085, "positive": 17, "negative": 21, "ties": 2, "ci95": [-0.0126352387, -0.0028054101]},
+      "relation_retention": {"mean_difference": 0.0000155241, "positive": 1, "negative": 0, "ties": 39, "ci95": [0.0, 0.0000465723]},
+      "state_recovery": {"mean_difference": 0.0042931401, "positive": 22, "negative": 18, "ties": 0, "ci95": [-0.0066468227, 0.0141422654]}
+    }
+  },
+  "interpretation": "Learned weights did not outperform controls on the amplitude-gated primary score; frozen learned was lower than both permuted and fixed weights with paired bootstrap intervals excluding zero. However, mean scoreable-edge coverage was only 27.8%-31.8%, and the preregistered >=50% coverage condition failed in nearly all runs. Per preregistration, the overall result is inconclusive rather than a successful confirmation or a clean rejection.",
+  "files": {
+    "preregistration": "EXPERIMENTS/2026-10-09-relational-fabric-omega22-preregistration.md",
+    "script": "experiments/relational_fabric_omega22_amplitude_gated.py"
+  }
+}
