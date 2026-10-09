@@ -1,0 +1,89 @@
+{
+  "experiment": "Ω-21 common-snapshot perturbation recovery",
+  "status": "Executed in Python analysis session: 40 seeds x 6 branches = 240 evaluations",
+  "execution_note": "Exploratory run occurred before its final report/protocol wording was committed; this is not described as preregistered.",
+  "protocol": {
+    "nodes": 160,
+    "coupling_J": 0.85,
+    "seeds": "20262100-20262139",
+    "training_steps": 100,
+    "post_perturbation_steps": 100,
+    "perturbed_patch": "first 10% of nodes have their state sign inverted",
+    "common_snapshot": "All conditions branch from the same trained continuous state per seed before perturbation.",
+    "bootstrap": "10,000 paired resamples; bootstrap RNG seed 20262199"
+  },
+  "summary_mean_sd": {
+    "adaptive_live": {
+      "common_pre_relation_score":[0.8150000,0.0139969],
+      "post_relation_score":[0.81828125,0.0148367],
+      "relation_retention":[0.92296875,0.0385701],
+      "state_recovery":[0.71547765,0.1887010],
+      "pre_rms":[0.26381066,0.0644830],
+      "post_rms":[0.31015653,0.0679420]
+    },
+    "frozen_learned": {
+      "common_pre_relation_score":[0.8150000,0.0139969],
+      "post_relation_score":[0.8178125,0.0145409],
+      "relation_retention":[0.93765625,0.0395282],
+      "state_recovery":[0.76916827,0.2018255],
+      "pre_rms":[0.26381066,0.0644830],
+      "post_rms":[0.27533441,0.0595939]
+    },
+    "permuted_learned": {
+      "common_pre_relation_score":[0.8150000,0.0139969],
+      "post_relation_score":[0.818984375,0.0136562],
+      "relation_retention":[0.897421875,0.0386566],
+      "state_recovery":[0.74605961,0.1829016],
+      "pre_rms":[0.26381066,0.0644830],
+      "post_rms":[0.24755222,0.0527995]
+    },
+    "fixed_original": {
+      "common_pre_relation_score":[0.8150000,0.0139969],
+      "post_relation_score":[0.8175,0.0156138],
+      "relation_retention":[0.915,0.0339403],
+      "state_recovery":[0.75374799,0.1909235],
+      "pre_rms":[0.26381066,0.0644830],
+      "post_rms":[0.25357926,0.0492702]
+    },
+    "adaptive_unsigned": {
+      "common_pre_relation_score":[0.495234375,0.0259629],
+      "post_relation_score":[0.957265625,0.0166324],
+      "relation_retention":[0.5,0.0271510],
+      "state_recovery":[-0.32326667,0.7166542],
+      "pre_rms":[0.26381066,0.0644830],
+      "post_rms":[0.61114817,0.0210224]
+    },
+    "no_coupling": {
+      "common_pre_relation_score":[0.495234375,0.0259629],
+      "post_relation_score":[0.495,0.0266183],
+      "relation_retention":[0.976953125,0.0039836],
+      "state_recovery":[0.5,0.0],
+      "pre_rms":[0.26381066,0.0644830],
+      "post_rms":[6.66545e-47,1.62241e-47]
+    }
+  },
+  "paired_bootstrap_adaptive_live_minus_control": {
+    "frozen_learned": {
+      "relation_retention":{"mean":-0.0146875,"positive":2,"negative":30,"ties":8,"ci95":[-0.01953125,-0.01]},
+      "state_recovery":{"mean":-0.05369062,"positive":0,"negative":40,"ties":0,"ci95":[-0.06076299,-0.04665928]}
+    },
+    "permuted_learned": {
+      "relation_retention":{"mean":0.025546875,"positive":30,"negative":6,"ties":4,"ci95":[0.016796875,0.034453125]},
+      "state_recovery":{"mean":-0.03058196,"positive":7,"negative":33,"ties":0,"ci95":[-0.04275322,-0.01562374]}
+    },
+    "fixed_original": {
+      "relation_retention":{"mean":0.00796875,"positive":22,"negative":14,"ties":4,"ci95":[0.00171875,0.014453125]},
+      "state_recovery":{"mean":-0.03827034,"positive":2,"negative":38,"ties":0,"ci95":[-0.04921506,-0.02666344]}
+    },
+    "adaptive_unsigned": {
+      "relation_retention":{"mean":0.42296875,"positive":40,"negative":0,"ties":0,"ci95":[0.410859375,0.435703125]},
+      "state_recovery":{"mean":1.03874432,"positive":40,"negative":0,"ties":0,"ci95":[0.87154863,1.27633007]}
+    }
+  },
+  "interpretation": "Live adaptation did not improve state recovery over any control. It retained more edge relations than the permuted learned weights and fixed original signed weights, but less than frozen learned weights. This is mixed evidence, not support for the broad hypothesis.",
+  "metric_caveats": [
+    "No-coupling relation_retention is misleading because continuous states decay to zero and the sign-based relation diagnostic becomes degenerate; do not interpret its high retention as organization.",
+    "The adaptive_unsigned condition uses unsigned relation scoring and is not directly comparable to signed-link scores.",
+    "The exploratory run did not have a preregistration committed before execution."
+  ]
+}
