@@ -1,0 +1,21 @@
+{
+  "experiment": "Ω-20 competing links and perturbation recovery",
+  "status": "executed in Python session; 40 paired seeds x 6 modes = 240 mode evaluations",
+  "preregistration": "EXPERIMENTS/2026-10-09-relational-fabric-omega20-preregistration.md",
+  "important_caveat": "Evaluation conditions do not all start from the same trained continuous state; live-adaptive and frozen/permuted modes have different state histories. Interpret live-vs-frozen comparison cautiously.",
+  "summary": {
+    "adaptive_signed": {"pre_relation_score":{"mean":0.809140625,"sd":0.0155750403},"post_relation_score":{"mean":0.81203125,"sd":0.0136958067},"relation_retention":{"mean":0.922109375,"sd":0.0401531243},"state_recovery":{"mean":0.7038815993,"sd":0.2001111044}},
+    "frozen_learned_signed": {"pre_relation_score":{"mean":0.81203125,"sd":0.0157534782},"post_relation_score":{"mean":0.8121875,"sd":0.0138277232},"relation_retention":{"mean":0.96453125,"sd":0.0303190665},"state_recovery":{"mean":0.7853122801,"sd":0.2238800361}},
+    "permuted_learned_signed": {"pre_relation_score":{"mean":0.811328125,"sd":0.0138618611},"post_relation_score":{"mean":0.811328125,"sd":0.0113600277},"relation_retention":{"mean":0.9621875,"sd":0.0298718551},"state_recovery":{"mean":0.770179344,"sd":0.2262963791}},
+    "fixed_unsigned": {"pre_relation_score":{"mean":0.96921875,"sd":0.0140388869},"post_relation_score":{"mean":0.96703125,"sd":0.0154387943},"relation_retention":{"mean":0.9721875,"sd":0.0176889977},"state_recovery":{"mean":0.755967273,"sd":0.13223758397}},
+    "adaptive_unsigned": {"pre_relation_score":{"mean":0.96875,"sd":0.0141357600},"post_relation_score":{"mean":0.964140625,"sd":0.0144681953},"relation_retention":{"mean":0.979609375,"sd":0.0095990195},"state_recovery":{"mean":0.7644232536,"sd":0.1002995011}},
+    "no_coupling": {"pre_relation_score":{"mean":0.5009375,"sd":0.0233875},"post_relation_score":{"mean":0.973984375,"sd":0.0183366224},"relation_retention":{"mean":0.504140625,"sd":0.0234002107},"state_recovery":{"mean":0.0,"sd":0.0}}
+  },
+  "paired_bootstrap_10000_adaptive_signed_minus_control": {
+    "frozen_learned_signed": {"relation_retention":{"mean":-0.042421875,"ci95":[-0.05171875,-0.0328125]},"state_recovery":{"mean":-0.0814306808,"ci95":[-0.0993809544,-0.0648052532]}},
+    "permuted_learned_signed": {"relation_retention":{"mean":-0.040078125,"ci95":[-0.05078125,-0.029296875]},"state_recovery":{"mean":-0.0662977447,"ci95":[-0.0861104598,-0.0467743247]}},
+    "fixed_unsigned": {"relation_retention":{"mean":-0.050078125,"ci95":[-0.06140625,-0.0388261719]},"state_recovery":{"mean":-0.0520856737,"ci95":[-0.1231015986,0.0142898632]}},
+    "adaptive_unsigned": {"relation_retention":{"mean":-0.0575,"ci95":[-0.069765625,-0.045234375},"state_recovery":{"mean":-0.0605416543,"ci95":[-0.1261665103,0.0016393462]}}
+  },
+  "interpretation": "Preregistered hypothesis unsupported. Adaptive signed links underperformed frozen and permuted signed controls on retention and state recovery; unsigned controls showed higher relation retention. No-coupling state decayed toward zero, making its post relation score uninformative."
+}
