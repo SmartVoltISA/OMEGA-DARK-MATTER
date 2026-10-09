@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "date": "2026-10-09",
+    "model": "dimensionless 1D phi^4 scalar field: u_tt = u_xx - u*(u^2-1)",
+    "execution_note": "The numerical experiments were executed in the current Python session using equivalent functions. The committed script is the reproducible implementation; the repository copy itself was not executed in-place during this run.",
+    "interpretation": "Toy-model numerical behavior only; not evidence that real matter is a relational fabric or that anything propagates faster than light."
+  },
+  "kink_perturbation": {
+    "N": 1024,
+    "L": 80,
+    "T": 30,
+    "dt": 0.015625,
+    "steps": 1920,
+    "seed": 20261012,
+    "initial_energy": 1.0009963319320088,
+    "final_energy": 1.0013704115779132,
+    "relative_energy_drift": 0.00037370730937885346,
+    "initial_kink_center": 0,
+    "final_kink_center": -0.05908464557881675,
+    "snapshots": {
+      "3": {
+        "center": -0.012261697994238638,
+        "energy": 1.001028482677136,
+        "rms_difference_from_unperturbed_kink": 0.0017075211245702595
+      },
+      "15": {
+        "center": -0.03001240510068954,
+        "energy": 1.0014724449169519,
+        "rms_difference_from_unperturbed_kink": 0.0036310217931803767
+      },
+      "30": {
+        "center": -0.05908464557881675,
+        "energy": 1.0013704115779132,
+        "rms_difference_from_unperturbed_kink": 0.006591476199979289
+      },
+      "7.5": {
+        "center": -0.012101935241652081,
+        "energy": 1.000742406332709,
+        "rms_difference_from_unperturbed_kink": 0.002302466479753737
+      },
+      "22.5": {
+        "center": -0.04469002751068712,
+        "energy": 1.000408614129859,
+        "rms_difference_from_unperturbed_kink": 0.005090216774370957
+      }
+    }
+  },
+  "kink_antikink_collision": {
+    "N": 1024,
+    "L": 80,
+    "T": 50,
+    "x0": 8,
+    "inward_speed": 0.2,
+    "dt": 0.015625,
+    "steps": 3200,
+    "initial_energy": 1.9225640746077448,
+    "final_energy": 1.9230243770492508,
+    "relative_energy_drift": 0.00023942111869529271,
+    "snapshots": {
+      "0": {
+        "walls": [
+          -8,
+          8
+        ],
+        "energy": 1.9225640746077448,
+        "center_value": -0.9999511833222662
+      },
+      "10": {
+        "walls": [
+          -6.03914,
+          6.03914
+        ],
+        "energy": 1.9225523659795924,
+        "center_value": -1.000732974774898
+      },
+      "20": {
+        "walls": [
+          -4.07914,
+          4.07914
+        ],
+        "energy": 1.9225438501793475,
+        "center_value": -0.990892519225649
+      },
+      "30": {
+        "walls": [
+          -1.9864,
+          1.9864
+        ],
+        "energy": 1.9226584058259282,
+        "center_value": -0.7775918333723871
+      },
+      "35": {
+        "walls": [],
+        "energy": 1.9441599088511645,
+        "center_value": 1.273593848938396
+      },
+      "40": {
+        "walls": [
+          -2.06868,
+          2.06868
+        ],
+        "energy": 1.9218327201806313,
+        "center_value": -0.8765862362543012
+      },
+      "45": {
+        "walls": [
+          -2.3915,
+          2.3915
+        ],
+        "energy": 1.9224263429999533,
+        "center_value": -0.8581495035650599
+      },
+      "50": {
+        "walls": [
+          -2.07607,
+          2.07607
+        ],
+        "energy": 1.9230243770492508,
+        "center_value": -0.6662256920562647
+      }
+    },
+    "measurement_warning": "At t=35 the zero-crossing detector reports no walls while the central field overshoots; this is a transient crossing-count failure, not proof the pair annihilated. Energy at t=35 also spikes (~1.12% vs initial), then recovers, suggesting diagnostic/time-discretization issue to investigate."
+  }
+}
