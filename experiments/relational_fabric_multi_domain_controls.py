@@ -13,7 +13,7 @@ def make_graph(n=120, k=8, rewire_p=0.15, rng=None):
     out=set()
     for a,b in sorted(edges):
         if rng.random()<rewire_p:
-            candidates=[v for v in range(n) if v!=a and tuple(sorted((a,v)) not in out]
+            candidates=[v for v in range(n) if v!=a and tuple(sorted((a,v))) not in out]
             if candidates: b=int(rng.choice(candidates))
         if a!=b: out.add(tuple(sorted((a,b))))
     edges=sorted(out); adj=[[] for _ in range(n)]
