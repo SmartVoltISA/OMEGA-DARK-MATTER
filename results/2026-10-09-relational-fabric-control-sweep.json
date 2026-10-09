@@ -1,0 +1,201 @@
+{
+  "experiment": "Ω-09 nonlinear domain formation versus linear control",
+  "date": "2026-10-09",
+  "parameters": {
+    "L": 80,
+    "T": 20,
+    "K": 1,
+    "rho": 1,
+    "lambda": 1,
+    "eta": 1,
+    "initial_rms": 0.03,
+    "bandlimited_fourier_modes": 40,
+    "cfl": 0.2,
+    "periodic_boundary": true
+  },
+  "nonlinear_resolution_sweep": [
+    {
+      "N": 256,
+      "dx": 0.3125,
+      "dt": 0.0625,
+      "steps": 320,
+      "relative_energy_drift": -0.002299230471558335,
+      "snapshots": {
+        "0": {
+          "walls": 4,
+          "near_vac": 0,
+          "rms": 0.03
+        },
+        "5": {
+          "walls": 2,
+          "near_vac": 0.22265625,
+          "rms": 1.1191176084
+        },
+        "10": {
+          "walls": 12,
+          "near_vac": 0.23046875,
+          "rms": 0.6189110348
+        },
+        "15": {
+          "walls": 16,
+          "near_vac": 0.21875,
+          "rms": 0.6521591952
+        },
+        "20": {
+          "walls": 8,
+          "near_vac": 0.3515625,
+          "rms": 0.775562349
+        }
+      }
+    },
+    {
+      "N": 512,
+      "dx": 0.15625,
+      "dt": 0.03125,
+      "steps": 640,
+      "relative_energy_drift": -0.0012813597322136924,
+      "snapshots": {
+        "0": {
+          "walls": 4,
+          "near_vac": 0,
+          "rms": 0.03
+        },
+        "5": {
+          "walls": 2,
+          "near_vac": 0.220703125,
+          "rms": 1.1151018575
+        },
+        "10": {
+          "walls": 12,
+          "near_vac": 0.22265625,
+          "rms": 0.6130630752
+        },
+        "15": {
+          "walls": 16,
+          "near_vac": 0.216796875,
+          "rms": 0.6513497289
+        },
+        "20": {
+          "walls": 8,
+          "near_vac": 0.3359375,
+          "rms": 0.7595958652
+        }
+      }
+    },
+    {
+      "N": 1024,
+      "dx": 0.078125,
+      "dt": 0.015625,
+      "steps": 1280,
+      "relative_energy_drift": -0.000641645155596726,
+      "snapshots": {
+        "0": {
+          "walls": 4,
+          "near_vac": 0,
+          "rms": 0.03
+        },
+        "5": {
+          "walls": 2,
+          "near_vac": 0.2119140625,
+          "rms": 1.1130149181
+        },
+        "10": {
+          "walls": 12,
+          "near_vac": 0.22265625,
+          "rms": 0.6102136817
+        },
+        "15": {
+          "walls": 16,
+          "near_vac": 0.2197265625,
+          "rms": 0.6514494644
+        },
+        "20": {
+          "walls": 8,
+          "near_vac": 0.32421875,
+          "rms": 0.7570764338
+        }
+      }
+    }
+  ],
+  "linear_control_resolution_sweep": [
+    {
+      "N": 256,
+      "dx": 0.3125,
+      "dt": 0.0625,
+      "steps": 320,
+      "relative_energy_drift": -0.010836229913330601,
+      "final": {
+        "walls": 10,
+        "near_vac": 0,
+        "rms": 0.0106188173
+      }
+    },
+    {
+      "N": 512,
+      "dx": 0.15625,
+      "dt": 0.03125,
+      "steps": 640,
+      "relative_energy_drift": -0.0066956015788945025,
+      "final": {
+        "walls": 8,
+        "near_vac": 0,
+        "rms": 0.0109276991
+      }
+    },
+    {
+      "N": 1024,
+      "dx": 0.078125,
+      "dt": 0.015625,
+      "steps": 1280,
+      "relative_energy_drift": -0.0033442842313972493,
+      "final": {
+        "walls": 6,
+        "near_vac": 0,
+        "rms": 0.0110772227
+      }
+    }
+  ],
+  "nonlinear_seed_ensemble": [
+    {
+      "seed": 20261009,
+      "relative_energy_drift": -0.0012813597322136924,
+      "final": {
+        "walls": 8,
+        "near_vac": 0.3359375,
+        "rms": 0.7595958652,
+        "mean": -0.249725625
+      }
+    },
+    {
+      "seed": 20261010,
+      "relative_energy_drift": -0.003055282771890632,
+      "final": {
+        "walls": 8,
+        "near_vac": 0.2890625,
+        "rms": 0.771992037,
+        "mean": 0.2035239676
+      }
+    },
+    {
+      "seed": 20261011,
+      "relative_energy_drift": 0.0002427644504703499,
+      "final": {
+        "walls": 10,
+        "near_vac": 0.279296875,
+        "rms": 0.6878996329,
+        "mean": -0.0222749503
+      }
+    }
+  ],
+  "interpretation": {
+    "nonlinear": "The double-well model moves from small fluctuations near zero toward regions near ±eta; final near-vacuum fraction is ~0.28–0.34 in the 512-point seed ensemble.",
+    "linear_control": "The single-well control remains small-amplitude (RMS ~0.011), and near-double-well-vacuum fraction is zero. Its sign-change count is not comparable as a particle/domain measure because tiny oscillations also change sign.",
+    "convergence": "Nonlinear final RMS and near-vacuum fraction vary modestly with resolution; energy drift decreases as resolution is refined. Domain-wall proxy counts at T=20 agree (8) across N=256,512,1024 for this fixed band-limited seed.",
+    "limitations": [
+      "This is a chosen continuum-field equation, not a node-free relational ontology derived from first principles.",
+      "The double-well potential explicitly builds in two preferred states.",
+      "A sign-change proxy is not a validated particle count.",
+      "No derivation of physical c, no superluminal-information test, and no dark-matter observation."
+    ]
+  }
+}
