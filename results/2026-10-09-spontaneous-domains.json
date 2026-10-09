@@ -1,0 +1,57 @@
+{
+  "model": "1-D phi^4 continuum field: rho*u_tt = K*u_xx - lambda*u*(u^2-eta^2)",
+  "parameters": {
+    "N": 1024,
+    "L": 80,
+    "T": 20,
+    "K": 1,
+    "rho": 1,
+    "lambda": 1,
+    "eta": 1,
+    "amplitude": 0.03,
+    "cfl": 0.3,
+    "dt": 0.023446658851113716,
+    "steps": 853
+  },
+  "results": [
+    {
+      "seed": 20261009,
+      "initial_energy": 32.4120519081214,
+      "final_energy": 32.43645373735628,
+      "relative_energy_drift": 0.0007528628333699649,
+      "periodic_sign_changes_domain_wall_proxy": 6,
+      "near_vacuum_fraction": 0.287109375,
+      "min_u": -1.0459406393590058,
+      "max_u": 1.357406048985023,
+      "mean_u": 0.3040909194034088
+    },
+    {
+      "seed": 20261010,
+      "initial_energy": 31.445838447239215,
+      "final_energy": 31.411333827270298,
+      "relative_energy_drift": -0.001097271425177932,
+      "periodic_sign_changes_domain_wall_proxy": 10,
+      "near_vacuum_fraction": 0.349609375,
+      "min_u": -1.170218488224032,
+      "max_u": 1.506325772832032,
+      "mean_u": 0.19769587250426332
+    },
+    {
+      "seed": 20261011,
+      "initial_energy": 31.691505771738605,
+      "final_energy": 31.62657572290737,
+      "relative_energy_drift": -0.002048815518546257,
+      "periodic_sign_changes_domain_wall_proxy": 10,
+      "near_vacuum_fraction": 0.4150390625,
+      "min_u": -1.4009428728308897,
+      "max_u": 1.3299204233530177,
+      "mean_u": -0.14224977920310647
+    }
+  ],
+  "caveats": [
+    "Exploratory toy model only; not a physical observation.",
+    "Sign-change count is a crude domain-wall proxy, not a proof of stable particle-like objects.",
+    "Different seeds yield different wall counts; longer-time persistence and grid-converged ensembles remain to be tested.",
+    "Initial random field amplitude is small around the unstable u=0 state; the double-well potential itself drives symmetry breaking, so this is an assumed mechanism."
+  ]
+}
