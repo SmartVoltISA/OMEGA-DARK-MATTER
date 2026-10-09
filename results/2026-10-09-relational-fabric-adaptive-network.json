@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "date": "2026-10-09",
+    "experiment": "Ω-12 adaptive relational network",
+    "nodes": 64,
+    "steps": 5000,
+    "dt": 0.01,
+    "seeds": [
+      20261014,
+      20261015,
+      20261016
+    ],
+    "model": "Damped noisy graph diffusion with adaptive edge weights; no double-well or preferred +/- states.",
+    "execution_note": "Equivalent Python functions were executed in the current session. The committed script was fetched back and verified but not executed directly from the GitHub checkout.",
+    "interpretation": "Adaptive couplings develop heterogeneity, but node states remain small and no stable domains are demonstrated."
+  },
+  "results": [
+    {
+      "seed": 20261014,
+      "condition": "adaptive",
+      "final": {
+        "state_rms": 0.0055743011,
+        "state_std": 0.0055724456,
+        "mean_abs_edge_difference": 0.0063716068,
+        "weight_mean": 0.1112939783,
+        "weight_std": 0.1224766,
+        "fraction_zero_weights": 0.2076271186,
+        "fraction_saturated_weights": 0.0042372881,
+        "abs_coproduct_weight_correlation": 0.1869676033
+      }
+    },
+    {
+      "seed": 20261015,
+      "condition": "adaptive",
+      "final": {
+        "state_rms": 0.0052847077,
+        "state_std": 0.0052702312,
+        "mean_abs_edge_difference": 0.0058390364,
+        "weight_mean": 0.0927197252,
+        "weight_std": 0.0947084642,
+        "fraction_zero_weights": 0.1708333333,
+        "fraction_saturated_weights": 0,
+        "abs_coproduct_weight_correlation": 0.2461268042
+      }
+    },
+    {
+      "seed": 20261016,
+      "condition": "adaptive",
+      "final": {
+        "state_rms": 0.0049282715,
+        "state_std": 0.0048530688,
+        "mean_abs_edge_difference": 0.0056265602,
+        "weight_mean": 0.09394493797,
+        "weight_std": 0.1019233925,
+        "fraction_zero_weights": 0.1701244813,
+        "fraction_saturated_weights": 0.0041493776,
+        "abs_coproduct_weight_correlation": 0.2853224829
+      }
+    },
+    {
+      "seed": 20261014,
+      "condition": "fixed weights",
+      "final": {
+        "state_rms": 0.0056823613,
+        "state_std": 0.0056796277,
+        "mean_abs_edge_difference": 0.0064827244,
+        "weight_mean": 0.05,
+        "weight_std": 0,
+        "fraction_zero_weights": 0,
+        "fraction_saturated_weights": 0,
+        "abs_coproduct_weight_correlation": null
+      }
+    },
+    {
+      "seed": 20261015,
+      "condition": "fixed weights",
+      "final": {
+        "state_rms": 0.005215812,
+        "state_std": 0.0051985192,
+        "mean_abs_edge_difference": 0.0058559705,
+        "weight_mean": 0.05,
+        "weight_std": 0,
+        "fraction_zero_weights": 0,
+        "fraction_saturated_weights": 0,
+        "abs_coproduct_weight_correlation": null
+      }
+    },
+    {
+      "seed": 20261016,
+      "condition": "fixed weights",
+      "final": {
+        "state_rms": 0.0048981548,
+        "state_std": 0.0048318662,
+        "mean_abs_edge_difference": 0.0057380852,
+        "weight_mean": 0.05,
+        "weight_std": 0,
+        "fraction_zero_weights": 0,
+        "fraction_saturated_weights": 0,
+        "abs_coproduct_weight_correlation": null
+      }
+    }
+  ]
+}
