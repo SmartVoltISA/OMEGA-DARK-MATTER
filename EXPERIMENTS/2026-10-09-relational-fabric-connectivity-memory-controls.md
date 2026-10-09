@@ -52,3 +52,20 @@ Script: `experiments/relational_fabric_connectivity_memory_controls.py`
 Raw results: `results/2026-10-09-relational-fabric-connectivity-memory-controls.json`
 
 Numerical results were generated in the current Python session using equivalent functions. The saved script was fetched back from GitHub to verify content, but was not executed directly from the GitHub checkout in this run.
+
+
+## Reproducibility addendum — 2026-10-10
+
+The committed source was executed directly from a clean GitHub Actions checkout by workflow run [37996278893](https://github.com/SmartVoltISA/OMEGA-DARK-MATTER/actions/runs/37996278893).
+
+Observed:
+- 160 condition runs completed: 40 seeds × 4 conditions.
+- All 160 runs reported **320 edges per graph**.
+- Recomputed aggregate summaries and paired comparisons matched the 2026-10-09 report within absolute tolerance 1e-8.
+- The previous JSON record had an empty `runs` array and claimed `edges_per_graph: 160`; both are corrected in the new direct-execution record: `results/2026-10-10-relational-fabric-connectivity-memory-controls-reproduction.json`.
+- The previous JSON remains unchanged as historical evidence. It is not the raw-run archive.
+- The direct-run source SHA-256 is preserved in the new JSON metadata.
+
+Classification: **DIRECT REPRODUCTION PASS FOR THE TOY MODEL; PRIOR RAW-RECORD METADATA CORRECTED**.
+
+This validates reproducibility of the recorded computational comparison, not a physical claim about matter, gravity, or universal laws. The learned-domain advantage remains a toy-network result with manually initialized domains and does not establish a general mechanism in nature.
