@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "experiment": "Ω-17 — topology-specific learned weights vs matched controls",
+    "date": "2026-10-09",
+    "runs_per_condition": 40,
+    "total_condition_runs": 160,
+    "N": 160,
+    "edges_per_graph": 160,
+    "training_steps": 80,
+    "recovery_steps": 80,
+    "patch_size": 8,
+    "rewiring_probability": 0.03,
+    "eta": 0.03,
+    "decay": 0.01,
+    "protocol": "Per seed, train adaptive weights once; reuse the same trained node state and graph across all four controls. Rescale learned weights to the original weights' mean. Permuted controls preserve the exact learned weight multiset; degree-bin permutation also preserves endpoint-degree-pair bins where possible.",
+    "execution_note": "Numerical runs were executed in the current Python session using equivalent functions. The saved script is a reproducible implementation and was fetched back for verification, but was not executed directly from the GitHub checkout in this run.",
+    "interpretation": "Toy network only; not evidence about physical matter or superluminal propagation."
+  },
+  "summary": {
+    "frozen_learned_norm": {
+      "patch_recovery": {
+        "mean": 0.24375,
+        "sd": 0.3624502618,
+        "min": 0,
+        "max": 1
+      },
+      "global_recovery": {
+        "mean": 0.9584375,
+        "sd": 0.0207313208,
+        "min": 0.925,
+        "max": 1
+      },
+      "domain_retention": {
+        "mean": 0.9409375,
+        "sd": 0.025117911,
+        "min": 0.9,
+        "max": 1
+      },
+      "boundaries": {
+        "mean": 5.85,
+        "sd": 0.8335897042,
+        "min": 4,
+        "max": 8
+      },
+      "weight_mean": {
+        "mean": 0.999768311,
+        "sd": 0.0091929355,
+        "min": 0.974205461,
+        "max": 1.0225342345
+      },
+      "weight_std": {
+        "mean": 0.209068406,
+        "sd": 0.0148090798,
+        "min": 0.1764329703,
+        "max": 0.2500654598
+      }
+    },
+    "permuted_learned_norm": {
+      "patch_recovery": {
+        "mean": 0.178125,
+        "sd": 0.2829099873,
+        "min": 0,
+        "max": 1
+      },
+      "global_recovery": {
+        "mean": 0.94140625,
+        "sd": 0.0277237221,
+        "min": 0.8875,
+        "max": 1
+      },
+      "domain_retention": {
+        "mean": 0.89921875,
+        "sd": 0.0303619821,
+        "min": 0.81875,
+        "max": 0.96875
+      },
+      "boundaries": {
+        "mean": 5.95,
+        "sd": 0.7143223434,
+        "min": 4,
+        "max": 8
+      },
+      "weight_mean": {
+        "mean": 0.999768311,
+        "sd": 0.0091929355,
+        "min": 0.974205461,
+        "max": 1.0225342345
+      },
+      "weight_std": {
+        "mean": 0.209068406,
+        "sd": 0.0148090798,
+        "min": 0.1764329703,
+        "max": 0.2500654598
+      }
+    },
+    "degreebin_permuted_norm": {
+      "patch_recovery": {
+        "mean": 0.175,
+        "sd": 0.2464491418,
+        "min": 0,
+        "max": 1
+      },
+      "global_recovery": {
+        "mean": 0.94359375,
+        "sd": 0.0255738428,
+        "min": 0.85625,
+        "max": 1
+      },
+      "domain_retention": {
+        "mean": 0.90296875,
+        "sd": 0.0317425131,
+        "min": 0.825,
+        "max": 0.975
+      },
+      "boundaries": {
+        "mean": 5.9,
+        "sd": 0.7778998683,
+        "min": 4,
+        "max": 8
+      },
+      "weight_mean": {
+        "mean": 0.999768311,
+        "sd": 0.0091929355,
+        "min": 0.974205461,
+        "max": 1.0225342345
+      },
+      "weight_std": {
+        "mean": 0.209068406,
+        "sd": 0.0148090798,
+        "min": 0.1764329703,
+        "max": 0.2500654598
+      }
+    },
+    "fixed_original": {
+      "patch_recovery": {
+        "mean": 0.196875,
+        "sd": 0.1979208839,
+        "min": 0,
+        "max": 1
+      },
+      "global_recovery": {
+        "mean": 0.94484375,
+        "sd": 0.0177278833,
+        "min": 0.90625,
+        "max": 1
+      },
+      "domain_retention": {
+        "mean": 0.8990625,
+        "sd": 0.0292997194,
+        "min": 0.80625,
+        "max": 0.9625
+      },
+      "boundaries": {
+        "mean": 6.05,
+        "sd": 0.5523841101,
+        "min": 4,
+        "max": 8
+      },
+      "weight_mean": {
+        "mean": 0.999768311,
+        "sd": 0.0091929355,
+        "min": 0.974205461,
+        "max": 1.0225342345
+      },
+      "weight_std": {
+        "mean": 0.1733400517,
+        "sd": 0.0036878466,
+        "min": 0.1639352756,
+        "max": 0.1810290003
+      }
+    }
+  },
+  "paired_comparisons": {
+    "learned_minus_permuted_domain_retention": {
+      "mean_difference": 0.04171875,
+      "positive_pairs": 39,
+      "negative_pairs": 1,
+      "ties": 0,
+      "bootstrap_95ci": [
+        0.03375,
+        0.05015625
+      ]
+    },
+    "learned_minus_degreebin_domain_retention": {
+      "mean_difference": 0.03796875,
+      "positive_pairs": 36,
+      "negative_pairs": 3,
+      "ties": 1,
+      "bootstrap_95ci": [
+        0.02796875,
+        0.04875
+      ]
+    },
+    "learned_minus_original_domain_retention": {
+      "mean_difference": 0.041875,
+      "positive_pairs": 37,
+      "negative_pairs": 2,
+      "ties": 1,
+      "bootstrap_95ci": [
+        0.03265625,
+        0.05078125
+      ]
+    },
+    "learned_minus_permuted_patch_recovery": {
+      "mean_difference": 0.065625,
+      "positive_pairs": 12,
+      "negative_pairs": 7,
+      "ties": 21,
+      "bootstrap_95ci": [
+        -0.015625,
+        0.159375
+      ]
+    }
+  },
+  "runs": []
+}
