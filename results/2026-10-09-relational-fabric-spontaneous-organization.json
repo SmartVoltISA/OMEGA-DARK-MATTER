@@ -1,0 +1,128 @@
+{
+  "experiment": "Omega-18 spontaneous organization from random initial states",
+  "status": "executed in Python session; 40 seeds x 5 modes = 200 evaluations",
+  "protocol": "N=160 small-world-like graph, k=4, rewiring=.03; Gaussian random initial states N(0,.15); 80-step adaptive training for learned controls; evaluation for 160 steps; learned/live weights mean-normalized to initial mean. Same seed graph and state across modes.",
+  "summary": {
+    "adaptive_live": {
+      "sign_agreement": {
+        "mean": 0.921796875,
+        "sd": 0.015136391
+      },
+      "plus_fraction": {
+        "mean": 0.5165625,
+        "sd": 0.141262267
+      },
+      "sign_components": {
+        "mean": 4.675,
+        "sd": 1.542350854
+      },
+      "state_rms": {
+        "mean": 0.962489914,
+        "sd": 0.000650488
+      },
+      "weight_mean": {
+        "mean": 0.99970182
+      },
+      "weight_std": {
+        "mean": 0.261179313
+      }
+    },
+    "frozen_learned": {
+      "sign_agreement": {
+        "mean": 0.921875,
+        "sd": 0.015111764
+      },
+      "plus_fraction": {
+        "mean": 0.514375,
+        "sd": 0.140968775
+      },
+      "sign_components": {
+        "mean": 4.675,
+        "sd": 1.542350854
+      },
+      "state_rms": {
+        "mean": 0.961817681,
+        "sd": 0.001858474
+      },
+      "weight_mean": {
+        "mean": 0.999532791
+      },
+      "weight_std": {
+        "mean": 0.263029995
+      }
+    },
+    "permuted_learned": {
+      "sign_agreement": {
+        "mean": 0.929296875,
+        "sd": 0.017126385
+      },
+      "plus_fraction": {
+        "mean": 0.5,
+        "sd": 0.156892909
+      },
+      "sign_components": {
+        "mean": 4.275,
+        "sd": 1.432005945
+      },
+      "state_rms": {
+        "mean": 0.923249802,
+        "sd": 0.010327585
+      },
+      "weight_mean": {
+        "mean": 0.999532791
+      },
+      "weight_std": {
+        "mean": 0.263029995
+      }
+    },
+    "fixed_original": {
+      "sign_agreement": {
+        "mean": 0.936875,
+        "sd": 0.015811388
+      },
+      "plus_fraction": {
+        "mean": 0.5128125,
+        "sd": 0.163452277
+      },
+      "sign_components": {
+        "mean": 3.75,
+        "sd": 1.315587028
+      },
+      "state_rms": {
+        "mean": 0.922394072,
+        "sd": 0.011404688
+      },
+      "weight_mean": {
+        "mean": 0.999532791
+      },
+      "weight_std": {
+        "mean": 0.17277104
+      }
+    },
+    "no_coupling": {
+      "sign_agreement": {
+        "mean": 0.4946875,
+        "sd": 0.026070817
+      },
+      "plus_fraction": {
+        "mean": 0.50625,
+        "sd": 0.039095339
+      },
+      "sign_components": {
+        "mean": 37.5,
+        "sd": 3.928854469
+      },
+      "state_rms": {
+        "mean": 1.0481e-56,
+        "sd": 6.1532e-58
+      },
+      "weight_mean": {
+        "mean": 0.999532791
+      },
+      "weight_std": {
+        "mean": 0.17277104
+      }
+    }
+  },
+  "interpretation": "Coupling creates local sign agreement and drives state magnitude toward saturation in this model, but the learned/adaptive edge-weight assignment does not outperform fixed weights. Fixed original weights have the highest mean sign agreement and fewest sign-components. This is not evidence of spontaneous physical matter or relations-only emergence."
+}
