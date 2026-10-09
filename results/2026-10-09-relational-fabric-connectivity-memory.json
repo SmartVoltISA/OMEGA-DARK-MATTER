@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "experiment": "Ω-16 corrected connectivity-memory comparison",
+    "date": "2026-10-09",
+    "N": 160,
+    "train_steps": 80,
+    "recovery_steps": 80,
+    "patch_size": 8,
+    "eta": 0.03,
+    "decay": 0.01,
+    "seed_range": "20261040–20261059 per mode",
+    "runs_per_mode": 20,
+    "execution_note": "The recorded results were generated in the current Python session with the equivalent update equations. The script below includes the corrected frozen-learned protocol and was fetched back from GitHub to verify storage; it was not executed directly from the GitHub checkout during this run.",
+    "note": "Initial four-domain pattern is imposed; this tests memory/recovery, not spontaneous emergence from relations alone."
+  },
+  "summary": {
+    "adaptive_live": {
+      "patch_recovery": {
+        "mean": 0.0875,
+        "sd": 0.13511690844364527,
+        "min": 0,
+        "max": 0.375
+      },
+      "global_recovery": {
+        "mean": 0.95375,
+        "sd": 0.006846531968814599,
+        "min": 0.94375,
+        "max": 0.96875
+      },
+      "domain_label_retention": {
+        "mean": 0.935625,
+        "sd": 0.01074908196814475,
+        "min": 0.91875,
+        "max": 0.9625
+      },
+      "baseline_boundaries": {
+        "mean": 4.1,
+        "sd": 0.44721359549995787,
+        "min": 4,
+        "max": 6
+      },
+      "perturbed_boundaries": {
+        "mean": 6.1,
+        "sd": 0.44721359549995787,
+        "min": 6,
+        "max": 8
+      },
+      "learned_weight_std": {
+        "mean": 0.4166964351566837,
+        "sd": 0.03483680256755976,
+        "min": 0.35903597406889204,
+        "max": 0.47060554673026467
+      }
+    },
+    "frozen_learned": {
+      "patch_recovery": {
+        "mean": 0.16875,
+        "sd": 0.2476036465593221,
+        "min": 0,
+        "max": 1
+      },
+      "global_recovery": {
+        "mean": 0.936875,
+        "sd": 0.023022086077686812,
+        "min": 0.89375,
+        "max": 1
+      },
+      "domain_label_retention": {
+        "mean": 0.8896875,
+        "sd": 0.027971069993458372,
+        "min": 0.8375,
+        "max": 0.95
+      },
+      "baseline_boundaries": {
+        "mean": 4.1,
+        "sd": 0.44721359549995787,
+        "min": 4,
+        "max": 6
+      },
+      "perturbed_boundaries": {
+        "mean": 5.9,
+        "sd": 0.7880689256524122,
+        "min": 4,
+        "max": 8
+      },
+      "learned_weight_std": {
+        "mean": 0.17359544746391034,
+        "sd": 0.0062323004743309535,
+        "min": 0.1629153652892591,
+        "max": 0.18589691533808772
+      }
+    },
+    "fixed_original": {
+      "patch_recovery": {
+        "mean": 0.16875,
+        "sd": 0.2476036465593221,
+        "min": 0,
+        "max": 1
+      },
+      "global_recovery": {
+        "mean": 0.936875,
+        "sd": 0.023022086077686812,
+        "min": 0.89375,
+        "max": 1
+      },
+      "domain_label_retention": {
+        "mean": 0.8896875,
+        "sd": 0.027971069993458372,
+        "min": 0.8375,
+        "max": 0.95
+      },
+      "baseline_boundaries": {
+        "mean": 4.1,
+        "sd": 0.44721359549995787,
+        "min": 4,
+        "max": 6
+      },
+      "perturbed_boundaries": {
+        "mean": 5.9,
+        "sd": 0.7880689256524122,
+        "min": 4,
+        "max": 8
+      },
+      "learned_weight_std": {
+        "mean": 0.17359544746391034,
+        "sd": 0.0062323004743309535,
+        "min": 0.1629153652892591,
+        "max": 0.18589691533808772
+      }
+    },
+    "shuffled_learned": {
+      "patch_recovery": {
+        "mean": 0.15,
+        "sd": 0.30240265941464967,
+        "min": 0,
+        "max": 1
+      },
+      "global_recovery": {
+        "mean": 0.919375,
+        "sd": 0.02816335104537922,
+        "min": 0.8625,
+        "max": 1
+      },
+      "domain_label_retention": {
+        "mean": 0.88375,
+        "sd": 0.030979088872470424,
+        "min": 0.8375,
+        "max": 0.9375
+      },
+      "baseline_boundaries": {
+        "mean": 4.1,
+        "sd": 0.44721359549995787,
+        "min": 4,
+        "max": 6
+      },
+      "perturbed_boundaries": {
+        "mean": 5.8,
+        "sd": 0.6155870112510924,
+        "min": 4,
+        "max": 6
+      },
+      "learned_weight_std": {
+        "mean": 0.17359544746391034,
+        "sd": 0.0062323004743309535,
+        "min": 0.1629153652892591,
+        "max": 0.18589691533808772
+      }
+    }
+  },
+  "paired": {
+    "live_vs_frozen_domain_retention": {
+      "mean_difference": 0.0459375,
+      "positive_pairs": 19,
+      "negative_pairs": 1,
+      "bootstrap_95ci": [
+        0.0334375,
+        0.05875
+      ]
+    },
+    "live_vs_frozen_patch_recovery": {
+      "mean_difference": -0.08125,
+      "positive_pairs": 2,
+      "negative_pairs": 7,
+      "ties": 11,
+      "bootstrap_95ci": [
+        -0.1875,
+        0
+      ]
+    },
+    "frozen_vs_fixed_domain_retention": {
+      "mean_difference": 0,
+      "positive_pairs": 0,
+      "negative_pairs": 0,
+      "ties": 20,
+      "bootstrap_95ci": [
+        0,
+        0
+      ]
+    },
+    "live_vs_shuffled_domain_retention": {
+      "mean_difference": 0.051875,
+      "positive_pairs": 19,
+      "negative_pairs": 0,
+      "ties": 1,
+      "bootstrap_95ci": [
+        0.038125,
+        0.0653203125
+      ]
+    }
+  }
+}
