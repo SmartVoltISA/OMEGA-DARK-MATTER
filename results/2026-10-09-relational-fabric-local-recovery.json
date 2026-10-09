@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "experiment": "Ω-15 local perturbation recovery",
+    "date": "2026-10-09",
+    "N": 160,
+    "k": 4,
+    "rewiring_probability": 0.03,
+    "steps_pre": 80,
+    "steps_post": 80,
+    "patch_size": 8,
+    "runs_per_mode": 20,
+    "seeds": "20261030-20261049 per mode",
+    "execution_note": "Numerical results were generated in the current Python session. The saved script was fetched back from GitHub for verification but was not executed directly from the GitHub checkout during this run.",
+    "model_note": "Dimensionless toy network; not a physical theory of matter."
+  },
+  "summary": {
+    "adaptive": {
+      "patch_recovery_mean": 0.0875,
+      "global_recovery_mean": 0.953125,
+      "domain_label_retention_mean": 0.936875,
+      "baseline_boundaries_mean": 4.0,
+      "perturbed_boundaries_mean": 6.0,
+      "final_weight_std_mean": 0.4085143173
+    },
+    "fixed": {
+      "patch_recovery_mean": 0.18125,
+      "global_recovery_mean": 0.9475,
+      "domain_label_retention_mean": 0.895,
+      "baseline_boundaries_mean": 4.0,
+      "perturbed_boundaries_mean": 5.9,
+      "final_weight_std_mean": 0.1716369178
+    },
+    "shuffled": {
+      "patch_recovery_mean": 0.20625,
+      "global_recovery_mean": 0.9296875,
+      "domain_label_retention_mean": 0.89875,
+      "baseline_boundaries_mean": 4.0,
+      "perturbed_boundaries_mean": 5.6,
+      "final_weight_std_mean": 0.1716369178
+    }
+  },
+  "paired_adaptive_minus_fixed_domain_retention": {
+    "mean_difference": 0.041875,
+    "bootstrap_95_percent_interval": [0.03125, 0.0521875],
+    "fraction_seed_pairs_adaptive_better": 0.95
+  },
+  "limitation": "Summary record only; individual run-level rows were not included in this JSON."
+}
