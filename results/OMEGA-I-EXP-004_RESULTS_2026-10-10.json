@@ -1,0 +1,66 @@
+{
+  "experiment": "Ω-I-EXP-004",
+  "status": "executed locally",
+  "ci_run": false,
+  "preregistration": "experiments/OMEGA-I-EXP-004_PREREGISTRATION_2026-10-10.md",
+  "design": {
+    "conditions": 4,
+    "trajectories_per_condition": 200,
+    "train_trajectories": 140,
+    "test_trajectories": 60,
+    "length": 600,
+    "bootstrap_resamples": 10000,
+    "seed_base": 20261010
+  },
+  "results": {
+    "AR1": {
+      "rmse": {
+        "current": 1.5725881321,
+        "history5": 1.5377981492,
+        "shuffled_target": 1.9375962014
+      },
+      "improvement": 0.0347523504,
+      "ci95": [
+        0.0316938882,
+        0.0377976333
+      ]
+    },
+    "IID": {
+      "rmse": {
+        "current": 1.4105546085,
+        "history5": 1.4105761963,
+        "shuffled_target": 1.4105745554
+      },
+      "improvement": -0.0000201083,
+      "ci95": [
+        -0.0001347993,
+        0.0000959053
+      ]
+    },
+    "REGIME_SWITCH": {
+      "rmse": {
+        "current": 1.9585784391,
+        "history5": 1.7134379586,
+        "shuffled_target": 1.9583206678
+      },
+      "improvement": 0.2437232099,
+      "ci95": [
+        0.22757581,
+        0.2600809866
+      ]
+    },
+    "DAMPED_OSCILLATOR": {
+      "rmse": {
+        "current": 1.3802130904,
+        "history5": 1.3570395925,
+        "shuffled_target": 1.6527686325
+      },
+      "improvement": 0.0231063813,
+      "ci95": [
+        0.0200898133,
+        0.0262324842
+      ]
+    }
+  },
+  "conclusion": "History improved prediction in three temporally structured synthetic processes; not in IID. Does not establish identity hypothesis."
+}
