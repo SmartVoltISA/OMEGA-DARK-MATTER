@@ -1,0 +1,251 @@
+{
+  "experiment": "Ω-23 continuous signed-relation margin",
+  "status": "Actually executed in Python analysis session; 40 paired seeds × 5 modes = 200 evaluations",
+  "execution_environment": "Python analysis session with NumPy; script committed for reproducibility but not run via GitHub Actions",
+  "protocol": {
+    "n_seeds": 40,
+    "seed_range": "20262300–20262339",
+    "nodes": 160,
+    "coupling_J": 0.85,
+    "train_steps": 100,
+    "post_perturbation_steps": 100,
+    "primary_metric": "M = mean(s_e*x_i*x_j) over all edges",
+    "activity_metric": "A = mean(abs(x_i*x_j)) over all edges",
+    "normalized_metric": "Q = M/(A + 1e-12)",
+    "edge_amplitude_gating": false,
+    "edge_signs_fixed_across_modes": true,
+    "common_trained_snapshot": true,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20262399
+  },
+  "summary": {
+    "adaptive_live": {
+      "post_M": {
+        "mean": 0.0798878183,
+        "sd": 0.0253965432
+      },
+      "delta_M": {
+        "mean": 0.0187926592,
+        "sd": 0.0105820107
+      },
+      "post_A": {
+        "mean": 0.0889547836,
+        "sd": 0.028454013
+      },
+      "post_Q": {
+        "mean": 0.8989091558,
+        "sd": 0.0172841257
+      },
+      "state_recovery": {
+        "mean": 0.6829899165,
+        "sd": 0.2017773554
+      },
+      "post_rms": {
+        "mean": 0.3064317394,
+        "sd": 0.0486770454
+      }
+    },
+    "frozen_learned": {
+      "post_M": {
+        "mean": 0.0637453568,
+        "sd": 0.0209519387
+      },
+      "delta_M": {
+        "mean": 0.0026501978,
+        "sd": 0.0078501439
+      },
+      "post_A": {
+        "mean": 0.0692955267,
+        "sd": 0.0226874116
+      },
+      "post_Q": {
+        "mean": 0.9195572892,
+        "sd": 0.0148652253
+      },
+      "state_recovery": {
+        "mean": 0.7351887864,
+        "sd": 0.2182305939
+      },
+      "post_rms": {
+        "mean": 0.2718193222,
+        "sd": 0.0441548577
+      }
+    },
+    "permuted_learned": {
+      "post_M": {
+        "mean": 0.0525446203,
+        "sd": 0.0171836233
+      },
+      "delta_M": {
+        "mean": -0.0085505387,
+        "sd": 0.0106856725
+      },
+      "post_A": {
+        "mean": 0.0563706211,
+        "sd": 0.0181645765
+      },
+      "post_Q": {
+        "mean": 0.9306881771,
+        "sd": 0.013547601
+      },
+      "state_recovery": {
+        "mean": 0.7110302399,
+        "sd": 0.1937648234
+      },
+      "post_rms": {
+        "mean": 0.2461011985,
+        "sd": 0.0395862468
+      }
+    },
+    "fixed_original": {
+      "post_M": {
+        "mean": 0.0545869877,
+        "sd": 0.0172252623
+      },
+      "delta_M": {
+        "mean": -0.0065081714,
+        "sd": 0.0088001247
+      },
+      "post_A": {
+        "mean": 0.0589333927,
+        "sd": 0.0183400412
+      },
+      "post_Q": {
+        "mean": 0.9249658294,
+        "sd": 0.015645983
+      },
+      "state_recovery": {
+        "mean": 0.7139977498,
+        "sd": 0.2035832101
+      },
+      "post_rms": {
+        "mean": 0.2516040428,
+        "sd": 0.0392301237
+      }
+    },
+    "no_coupling": {
+      "post_M": {
+        "mean": 3.6532254649e-93,
+        "sd": 1.3093472094e-93
+      },
+      "delta_M": {
+        "mean": -0.0610951591,
+        "sd": 0.0230556456
+      },
+      "post_A": {
+        "mean": 4.2241921011e-93,
+        "sd": 1.5772564454e-93
+      },
+      "post_Q": {
+        "mean": 3.6532254649e-81,
+        "sd": 1.3093472094e-81
+      },
+      "state_recovery": {
+        "mean": 0.5,
+        "sd": 0
+      },
+      "post_rms": {
+        "mean": 6.6723848863e-47,
+        "sd": 1.2578800562e-47
+      }
+    }
+  },
+  "paired_frozen_learned_minus_controls": {
+    "permuted_learned": {
+      "post_M": {
+        "mean_difference": 0.0112007365,
+        "positive": 40,
+        "negative": 0,
+        "ci95": [
+          0.0094020278,
+          0.0129857656
+        ]
+      },
+      "delta_M": {
+        "mean_difference": 0.0112007365,
+        "positive": 40,
+        "negative": 0,
+        "ci95": [
+          0.0093318434,
+          0.013002243
+        ]
+      },
+      "post_A": {
+        "mean_difference": 0.0129249055,
+        "positive": 40,
+        "negative": 0,
+        "ci95": [
+          0.0107985208,
+          0.0151224035
+        ]
+      },
+      "post_Q": {
+        "mean_difference": -0.0111308879,
+        "positive": 2,
+        "negative": 38,
+        "ci95": [
+          -0.0137583863,
+          -0.008408482985
+        ]
+      },
+      "state_recovery": {
+        "mean_difference": 0.0241585465,
+        "positive": 26,
+        "negative": 14,
+        "ci95": [
+          0.0076960052,
+          0.0407755459
+        ]
+      }
+    },
+    "fixed_original": {
+      "post_M": {
+        "mean_difference": 0.0091583691,
+        "positive": 38,
+        "negative": 2,
+        "ci95": [
+          0.007263293,
+          0.0109603196
+        ]
+      },
+      "delta_M": {
+        "mean_difference": 0.0091583691,
+        "positive": 38,
+        "negative": 2,
+        "ci95": [
+          0.0072575369,
+          0.0109313367
+        ]
+      },
+      "post_A": {
+        "mean_difference": 0.010362134,
+        "positive": 38,
+        "negative": 2,
+        "ci95": [
+          0.0081751122,
+          0.0123924803
+        ]
+      },
+      "post_Q": {
+        "mean_difference": -0.0054085402,
+        "positive": 6,
+        "negative": 34,
+        "ci95": [
+          -0.0070145141,
+          -0.003742079
+        ]
+      },
+      "state_recovery": {
+        "mean_difference": 0.0211910366,
+        "positive": 24,
+        "negative": 16,
+        "ci95": [
+          0.0059538594,
+          0.0380539733
+        ]
+      }
+    }
+  },
+  "interpretation": "Frozen learned magnitudes improve raw continuous margin M versus both controls, but they also increase activity A. Normalized alignment Q is significantly lower than both controls. Therefore the primary raw-margin advantage is not evidence of better relational alignment independent of state magnitude; no general learned-structure advantage is established. Toy-network result only, no physical inference.",
+  "raw_per_seed_rows": "Full per-seed rows are emitted by the committed script when run locally; this committed result file records summary statistics and paired bootstrap comparisons."
+}
