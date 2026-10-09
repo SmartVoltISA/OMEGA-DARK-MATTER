@@ -203,5 +203,5 @@
       }
     }
   },
-  "runs": []
+  "note": "Committed artifact contains summary statistics and paired bootstrap comparisons. Full per-seed rows are produced by running the committed script locally; the analysis-session run did retain all 200 rows during computation."
 }
