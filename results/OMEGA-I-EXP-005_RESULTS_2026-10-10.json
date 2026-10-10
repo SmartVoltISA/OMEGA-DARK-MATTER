@@ -1,0 +1,49 @@
+{
+  "experiment": "Ω-I-EXP-005",
+  "status": "exploratory; not preregistered before execution",
+  "n_families": 500,
+  "n_pairs": 4000,
+  "train_pairs": 2800,
+  "test_pairs": 1200,
+  "metrics": {
+    "PRESENT_ONLY": {
+      "auc": 0.5886555556,
+      "balanced_accuracy": 0.5641666667
+    },
+    "ORGANIZATION": {
+      "auc": 0.5886555556,
+      "balanced_accuracy": 0.5641666667
+    },
+    "HISTORY_AWARE": {
+      "auc": 0.7695527778,
+      "balanced_accuracy": 0.7058333333
+    }
+  },
+  "bootstrap_95_ci": {
+    "history_auc": [
+      0.73897264,
+      0.79811424
+    ],
+    "present_auc": [
+      0.55464264,
+      0.62377028
+    ],
+    "auc_difference_history_minus_present": [
+      0.14767736,
+      0.21494826
+    ]
+  },
+  "shuffled_training_label_control_auc": {
+    "median": 0.4693819444,
+    "mean": 0.4827199722,
+    "percentile_2_5": 0.24050375,
+    "percentile_97_5": 0.7422402778
+  },
+  "feature_order": [
+    "current_state_distance",
+    "organization_distance",
+    "history_mean_distance",
+    "transition_signature_distance"
+  ],
+  "caveat": "Exploratory, construction-specific; does not confirm Ω-I."
+}
