@@ -1,0 +1,18 @@
+{
+  "experiment": "Ω-I-EXP-006",
+  "status": "executed locally",
+  "ci_run": false,
+  "trials": 10000,
+  "samples": 20000,
+  "train_samples": 14000,
+  "test_samples": 6000,
+  "heldout_auc": 0.5021898889,
+  "balanced_accuracy": 0.4998333333,
+  "paired_branch_choice_accuracy": 0.5033333333,
+  "paired_accuracy_normal_95_ci": [
+    0.4854414607,
+    0.5212252059
+  ],
+  "n_heldout_pairs": 3000,
+  "conclusion": "Chance-level as expected; label assigned independently of observations."
+}
