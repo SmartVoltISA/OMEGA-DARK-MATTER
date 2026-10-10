@@ -1,0 +1,50 @@
+{
+  "experiment": "Ω-I-EXP-007",
+  "status": "executed locally; hypothesis criterion not met",
+  "execution": "local Python/NumPy/scikit-learn; no CI",
+  "design": {
+    "conditions": [
+      "AR1",
+      "IID",
+      "SWITCH",
+      "OSC"
+    ],
+    "families_per_condition": 250,
+    "rows_total": 4000,
+    "train_rows": 2800,
+    "test_rows": 1200,
+    "split_by_family": true,
+    "bootstrap_replicates": 2000
+  },
+  "models": {
+    "present_only": {
+      "roc_auc": 0.5558777778,
+      "balanced_accuracy": 0.5433333333
+    },
+    "present_history": {
+      "roc_auc": 0.5738694444,
+      "balanced_accuracy": 0.5425
+    },
+    "present_history_transition": {
+      "roc_auc": 0.5771194444,
+      "balanced_accuracy": 0.5433333333
+    },
+    "full_with_organization": {
+      "roc_auc": 0.7271027778,
+      "balanced_accuracy": 0.7008333333
+    }
+  },
+  "history_incremental_auc": 0.0179916667,
+  "history_incremental_auc_bootstrap_ci95": [
+    -0.01539493,
+    0.05051597
+  ],
+  "full_model_auc_by_condition": {
+    "AR1": 0.7107555556,
+    "IID": 0.7261333333,
+    "OSC": 0.7373333333,
+    "SWITCH": 0.7184
+  },
+  "permuted_labels_negative_control_auc": 0.4880777778,
+  "conclusion": "Incremental history effect statistically inconclusive. Organization features improve classification, but intervention artifacts and stipulated lineage labels block claims about universal identity."
+}
