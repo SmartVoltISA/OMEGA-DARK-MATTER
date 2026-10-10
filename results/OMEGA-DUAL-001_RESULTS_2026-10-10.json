@@ -1,0 +1,49 @@
+{
+  "experiment": "OMEGA-DUAL-001",
+  "status": "EXECUTED_LOCALLY",
+  "date": "2026-10-10",
+  "seed": 20261010,
+  "n_examples_per_noise": 100000,
+  "train_test_split": "first 50% train, last 50% test; no fitted parameters",
+  "primary_metric": "held-out accuracy",
+  "noise_sweep": [
+    {"observation_noise_p": 0.0, "conditions": {
+      "coupled": {"accuracy": 1.0, "correct": 50000, "n_test": 50000, "wilson95": [0.9999231767258548, 0.9999999999999999]},
+      "shuffled_message": {"accuracy": 0.49958, "correct": 24979, "n_test": 50000, "wilson95": [0.49519758945546194, 0.5039624750760883]},
+      "identical_nodes": {"accuracy": 0.50184, "correct": 25092, "n_test": 50000, "wilson95": [0.4974574439610825, 0.5062222733292686]},
+      "uncoupled_chance": {"accuracy": 0.49712, "correct": 24856, "n_test": 50000, "wilson95": [0.4927378495892193, 0.5015025929128397]}
+    }},
+    {"observation_noise_p": 0.05, "conditions": {
+      "coupled": {"accuracy": 0.9053, "correct": 45265, "n_test": 50000, "wilson95": [0.9027023141888978, 0.9078354128650802]},
+      "shuffled_message": {"accuracy": 0.49812, "correct": 24906, "n_test": 50000, "wilson95": [0.49373773104778657, 0.5025025578077241]},
+      "identical_nodes": {"accuracy": 0.50184, "correct": 25092, "n_test": 50000, "wilson95": [0.4974574439610825, 0.5062222733292686]},
+      "uncoupled_chance": {"accuracy": 0.50058, "correct": 25029, "n_test": 50000, "wilson95": [0.496197514034463, 0.504962396850539]}
+    }},
+    {"observation_noise_p": 0.1, "conditions": {
+      "coupled": {"accuracy": 0.82004, "correct": 41002, "n_test": 50000, "wilson95": [0.8166482554845249, 0.8233825714741603]},
+      "shuffled_message": {"accuracy": 0.50244, "correct": 25122, "n_test": 50000, "wilson95": [0.49805742037383327, 0.5068222047285889]},
+      "identical_nodes": {"accuracy": 0.50184, "correct": 25092, "n_test": 50000, "wilson95": [0.4974574439610825, 0.5062222733292686]},
+      "uncoupled_chance": {"accuracy": 0.50196, "correct": 25098, "n_test": 50000, "wilson95": [0.49757743873880067, 0.5063422601139645]}
+    }},
+    {"observation_noise_p": 0.2, "conditions": {
+      "coupled": {"accuracy": 0.67972, "correct": 33986, "n_test": 50000, "wilson95": [0.6756166123106732, 0.6837957743316682]},
+      "shuffled_message": {"accuracy": 0.49832, "correct": 24916, "n_test": 50000, "wilson95": [0.49393770944297066, 0.5027025486832303]},
+      "identical_nodes": {"accuracy": 0.50184, "correct": 25092, "n_test": 50000, "wilson95": [0.4974574439610825, 0.5062222733292686]},
+      "uncoupled_chance": {"accuracy": 0.50176, "correct": 25088, "n_test": 50000, "wilson95": [0.4973774475828341, 0.5061422819992409]}
+    }},
+    {"observation_noise_p": 0.3, "conditions": {
+      "coupled": {"accuracy": 0.58092, "correct": 29046, "n_test": 50000, "wilson95": [0.5765891083494009, 0.5852384585719114]},
+      "shuffled_message": {"accuracy": 0.49984, "correct": 24992, "n_test": 50000, "wilson95": [0.4954575681597667, 0.5042224564236809]},
+      "identical_nodes": {"accuracy": 0.50184, "correct": 25092, "n_test": 50000, "wilson95": [0.4974574439610825, 0.5062222733292686]},
+      "uncoupled_chance": {"accuracy": 0.49758, "correct": 24879, "n_test": 50000, "wilson95": [0.49319779288305376, 0.501962578941593]}
+    }}
+  ],
+  "coupling_reliability_sweep_at_p_0_1": [
+    {"delivery_reliability_q": 0.0, "accuracy": 0.18154, "correct": 9077, "n_test": 50000, "wilson95": [0.1781858191637879, 0.18494311111598055]},
+    {"delivery_reliability_q": 0.25, "accuracy": 0.34078, "correct": 17039, "n_test": 50000, "wilson95": [0.33663790626258056, 0.3449465573408382]},
+    {"delivery_reliability_q": 0.5, "accuracy": 0.5003, "correct": 25015, "n_test": 50000, "wilson95": [0.4959175333854762, 0.5046824205205593]},
+    {"delivery_reliability_q": 0.75, "accuracy": 0.6607, "correct": 33035, "n_test": 50000, "wilson95": [0.6565377088287908, 0.6648376001708988]},
+    {"delivery_reliability_q": 1.0, "accuracy": 0.81846, "correct": 40923, "n_test": 50000, "wilson95": [0.8150568888840194, 0.8218141808362122]}
+  ],
+  "note": "Constructed synthetic XOR information-routing task; not evidence for universal duality or physical ontology."
+}
