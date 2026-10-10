@@ -1,0 +1,75 @@
+{
+  "experiment": "OMEGA-DUAL-004",
+  "status": "EXECUTED_LOCALLY",
+  "date": "2026-10-10",
+  "seed": 20261010,
+  "n_trajectories": 300,
+  "steps_per_trajectory": 300,
+  "burn_in": 50,
+  "observation_noise_sigma": 0.5,
+  "bootstrap_resamples": 2000,
+  "adaptation_window": 15,
+  "message_cost": 0.02,
+  "summary": {
+    "oracle": {
+      "accuracy": 0.7978,
+      "trajectory_bootstrap95": [
+        0.7946263333,
+        0.8010266667
+      ]
+    },
+    "fixed": {
+      "accuracy": 0.65292,
+      "trajectory_bootstrap95": [
+        0.648119,
+        0.657974
+      ]
+    },
+    "adaptive": {
+      "accuracy": 0.7394533333,
+      "trajectory_bootstrap95": [
+        0.7353596667,
+        0.7433733333
+      ]
+    },
+    "shared": {
+      "accuracy": 0.8338933333,
+      "trajectory_bootstrap95": [
+        0.830773,
+        0.836987
+      ]
+    },
+    "no_communication": {
+      "accuracy": 0.66484,
+      "trajectory_bootstrap95": [
+        0.66076,
+        0.6685603333
+      ]
+    },
+    "adaptive_minus_fixed": {
+      "mean_accuracy_difference": 0.0865333333,
+      "trajectory_bootstrap95": [
+        0.0814913333,
+        0.0912946667
+      ]
+    },
+    "regime0": {
+      "adaptive": 0.7440333333,
+      "fixed": 0.6189333333
+    },
+    "regime1": {
+      "adaptive": 0.7481333333,
+      "fixed": 0.7992
+    },
+    "regime2": {
+      "adaptive": 0.7246666667,
+      "fixed": 0.5519555556
+    },
+    "adaptive_net_after_message_cost": {
+      "raw_accuracy": 0.7394533333,
+      "message_cost_per_scored_step": 0.02,
+      "net_score": 0.7194533333
+    }
+  },
+  "scope": "Synthetic task-dependent adaptive sensor allocation only."
+}
