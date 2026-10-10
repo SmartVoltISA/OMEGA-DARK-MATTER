@@ -1,0 +1,173 @@
+{
+  "experiment": "OMEGA-DUAL-002B",
+  "status": "EXECUTED_LOCALLY",
+  "date": "2026-10-10",
+  "seed": 20261010,
+  "n_trajectories_per_sigma": 300,
+  "steps_per_trajectory": 200,
+  "burn_in": 50,
+  "bootstrap_resamples": 2000,
+  "noise_results": [
+    {
+      "sigma": 0.1,
+      "n_trajectories": 300,
+      "scored_steps": 150,
+      "conditions": {
+        "coupled_specialists": {
+          "accuracy": 0.9180888888888887,
+          "trajectory_bootstrap95": [
+            0.9152,
+            0.9210888888888888
+          ]
+        },
+        "uncoupled_specialists": {
+          "accuracy": 0.7396444444444444,
+          "trajectory_bootstrap95": [
+            0.7347111111111111,
+            0.744645
+          ]
+        },
+        "shuffled_partner": {
+          "accuracy": 0.6697555555555555,
+          "trajectory_bootstrap95": [
+            0.6643777777777778,
+            0.6751555555555556
+          ]
+        },
+        "shared_target_sensor": {
+          "accuracy": 0.9189555555555555,
+          "trajectory_bootstrap95": [
+            0.9162888888888888,
+            0.9216011111111112
+          ]
+        },
+        "paired_coupled_minus_uncoupled": {
+          "mean_accuracy_difference": 0.17844444444444443,
+          "trajectory_bootstrap95": [
+            0.17393277777777774,
+            0.18302333333333334
+          ]
+        }
+      }
+    },
+    {
+      "sigma": 0.5,
+      "n_trajectories": 300,
+      "scored_steps": 150,
+      "conditions": {
+        "coupled_specialists": {
+          "accuracy": 0.7066,
+          "trajectory_bootstrap95": [
+            0.7017333333333333,
+            0.7112888888888889
+          ]
+        },
+        "uncoupled_specialists": {
+          "accuracy": 0.6407777777777778,
+          "trajectory_bootstrap95": [
+            0.6362888888888889,
+            0.6455349999999999
+          ]
+        },
+        "shuffled_partner": {
+          "accuracy": 0.6030666666666668,
+          "trajectory_bootstrap95": [
+            0.5984,
+            0.6077338888888889
+          ]
+        },
+        "shared_target_sensor": {
+          "accuracy": 0.7070666666666667,
+          "trajectory_bootstrap95": [
+            0.7027772222222222,
+            0.711623888888889
+          ]
+        },
+        "paired_coupled_minus_uncoupled": {
+          "mean_accuracy_difference": 0.06582222222222223,
+          "trajectory_bootstrap95": [
+            0.06124444444444445,
+            0.07066722222222223
+          ]
+        }
+      }
+    },
+    {
+      "sigma": 1,
+      "n_trajectories": 300,
+      "scored_steps": 150,
+      "conditions": {
+        "coupled_specialists": {
+          "accuracy": 0.6139777777777777,
+          "trajectory_bootstrap95": [
+            0.6095550000000001,
+            0.6185999999999999
+          ]
+        },
+        "uncoupled_specialists": {
+          "accuracy": 0.5804222222222222,
+          "trajectory_bootstrap95": [
+            0.5759327777777777,
+            0.5848683333333333
+          ]
+        },
+        "shuffled_partner": {
+          "accuracy": 0.5589555555555555,
+          "trajectory_bootstrap95": [
+            0.5542444444444444,
+            0.5633111111111111
+          ]
+        },
+        "shared_target_sensor": {
+          "accuracy": 0.6155111111111111,
+          "trajectory_bootstrap95": [
+            0.6108883333333333,
+            0.6202672222222223
+          ]
+        },
+        "paired_coupled_minus_uncoupled": {
+          "mean_accuracy_difference": 0.03355555555555555,
+          "trajectory_bootstrap95": [
+            0.028843888888888884,
+            0.0385111111111111
+          ]
+        }
+      }
+    }
+  ],
+  "reliability_sweep_sigma_0_5": [
+    {
+      "q": 0.25,
+      "accuracy": 0.6086666666666667,
+      "trajectory_bootstrap95": [
+        0.6040438888888889,
+        0.613445
+      ]
+    },
+    {
+      "q": 0.5,
+      "accuracy": 0.6412666666666667,
+      "trajectory_bootstrap95": [
+        0.6369333333333332,
+        0.6455777777777778
+      ]
+    },
+    {
+      "q": 0.75,
+      "accuracy": 0.6716666666666666,
+      "trajectory_bootstrap95": [
+        0.667243888888889,
+        0.6762444444444444
+      ]
+    },
+    {
+      "q": 1,
+      "accuracy": 0.7052666666666667,
+      "trajectory_bootstrap95": [
+        0.7006,
+        0.7098005555555555
+      ]
+    }
+  ],
+  "scope": "Synthetic information-routing benchmark only; no universal or physical inference."
+}
