@@ -21,16 +21,16 @@ def main():
         y=signp(np.sum(x*weights[None,:,:],axis=2))[:,sl]
         obs1=x[:,:,0]+rng.normal(0,sigma,(N,T))
         obs2=x[:,:,1]+rng.normal(0,sigma,(N,T))
+        aggregate=np.sum(x*weights[None,:,:],axis=2)
+        shared1=aggregate+rng.normal(0,sigma,(N,T))
+        shared2=aggregate+rng.normal(0,sigma,(N,T))
         preds={
           "specialized":signp(weights[None,:,0]*obs1+weights[None,:,1]*obs2)[:,sl],
-          "shared_aggregate":signp(
-              (np.sum(x*weights[None,:,:],axis=2)+rng.normal(0,sigma,(N,T)))[:,sl]
-              +(np.sum(x*weights[None,:,:],axis=2)+rng.normal(0,sigma,(N,T)))[:,sl]),
+          "shared_aggregate":signp(shared1[:,sl]+shared2[:,sl]),
           "misallocated_specialists":signp(weights[::-1][None,:,0]*obs1+weights[::-1][None,:,1]*obs2)[:,sl]
         }
         rand2=rng.normal(0,1,(N,T))
-        # Single aggregate sensor plus an independent random second channel.
-        # The aggregate sensor is generated independently for this condition.
+        # One aggregate sensor plus an independent random second channel.
         preds["single_sensor_shared"]=signp(shared1[:,sl]+rand2[:,sl])
         # Shuffle partner observations within each trajectory across scored times.
         shuffled=np.empty_like(obs2)
