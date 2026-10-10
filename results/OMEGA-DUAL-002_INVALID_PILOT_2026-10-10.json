@@ -1,0 +1,210 @@
+{
+  "experiment": "OMEGA-DUAL-002",
+  "status": "INVALID_AS_CONFIRMATORY_EXPLORATORY_PILOT_ONLY",
+  "date": "2026-10-10",
+  "seed": 20261010,
+  "n_trajectories_per_noise": 300,
+  "steps_per_trajectory": 200,
+  "burn_in": 50,
+  "bootstrap_resamples": 2000,
+  "noise_conditions": [
+    {
+      "sigma": 0.1,
+      "coupled": {
+        "mse": 0.2311301051,
+        "ci": [
+          0.2241435291,
+          0.2382941067
+        ],
+        "accuracy": 0.9180888889
+      },
+      "uncoupled": {
+        "mse": 0.5405777778,
+        "ci": [
+          0.5329766667,
+          0.5476672222
+        ],
+        "accuracy": 0.4920222222
+      },
+      "shared": {
+        "mse": 0.2298398687,
+        "ci": [
+          0.2238147779,
+          0.2357276204
+        ],
+        "accuracy": 0.9187111111
+      },
+      "shuffled": {
+        "mse": 1.1441599112,
+        "ci": [
+          1.124666128,
+          1.1631779945
+        ],
+        "accuracy": 0.6684
+      },
+      "paired_improvement": {
+        "mean": 0.3094476727,
+        "ci": [
+          0.3024822663,
+          0.3163311051
+        ]
+      },
+      "q_sweep": [
+        {
+          "q": 0.25,
+          "mse": 1.2417223203,
+          "accuracy": 0.6651555556
+        },
+        {
+          "q": 0.5,
+          "mse": 0.9148330564,
+          "accuracy": 0.7466
+        },
+        {
+          "q": 0.75,
+          "mse": 0.5644021325,
+          "accuracy": 0.8341777778
+        },
+        {
+          "q": 1,
+          "mse": 0.2311301051,
+          "accuracy": 0.9180888889
+        }
+      ]
+    },
+    {
+      "sigma": 0.5,
+      "coupled": {
+        "mse": 0.8066701691,
+        "ci": [
+          0.7948264312,
+          0.8185076401
+        ],
+        "accuracy": 0.707
+      },
+      "uncoupled": {
+        "mse": 0.9313333333,
+        "ci": [
+          0.9195327778,
+          0.9428455556
+        ],
+        "accuracy": 0.3906
+      },
+      "shared": {
+        "mse": 0.7749464571,
+        "ci": [
+          0.7654208927,
+          0.7848938223
+        ],
+        "accuracy": 0.7077555556
+      },
+      "shuffled": {
+        "mse": 1.1434553003,
+        "ci": [
+          1.1312627508,
+          1.1556991961
+        ],
+        "accuracy": 0.6016
+      },
+      "paired_improvement": {
+        "mean": 0.1246631643,
+        "ci": [
+          0.1174481176,
+          0.1320860755
+        ]
+      },
+      "q_sweep": [
+        {
+          "q": 0.25,
+          "mse": 1.1910928108,
+          "accuracy": 0.6055333333
+        },
+        {
+          "q": 0.5,
+          "mse": 1.0600045206,
+          "accuracy": 0.6412666667
+        },
+        {
+          "q": 0.75,
+          "mse": 0.9385538681,
+          "accuracy": 0.6727333333
+        },
+        {
+          "q": 1,
+          "mse": 0.8066701691,
+          "accuracy": 0.707
+        }
+      ]
+    },
+    {
+      "sigma": 1,
+      "coupled": {
+        "mse": 1.0695912622,
+        "ci": [
+          1.0566066897,
+          1.0821751176
+        ],
+        "accuracy": 0.6132888889
+      },
+      "uncoupled": {
+        "mse": 1.1809111111,
+        "ci": [
+          1.1664883333,
+          1.1943144444
+        ],
+        "accuracy": 0.3270222222
+      },
+      "shared": {
+        "mse": 0.9784581331,
+        "ci": [
+          0.9687853171,
+          0.9881666031
+        ],
+        "accuracy": 0.6207777778
+      },
+      "shuffled": {
+        "mse": 1.2329967097,
+        "ci": [
+          1.2199104069,
+          1.2465070913
+        ],
+        "accuracy": 0.5610666667
+      },
+      "paired_improvement": {
+        "mean": 0.1113198489,
+        "ci": [
+          0.1030536482,
+          0.1194224827
+        ]
+      },
+      "q_sweep": [
+        {
+          "q": 0.25,
+          "mse": 1.1946665377,
+          "accuracy": 0.5714888889
+        },
+        {
+          "q": 0.5,
+          "mse": 1.1498193394,
+          "accuracy": 0.5838666667
+        },
+        {
+          "q": 0.75,
+          "mse": 1.1112116997,
+          "accuracy": 0.6000444444
+        },
+        {
+          "q": 1,
+          "mse": 1.0695912622,
+          "accuracy": 0.6132888889
+        }
+      ]
+    }
+  ],
+  "validity_audit": [
+    "Implementation did not match preregistered state update: the registered u(t) input/control term was not implemented.",
+    "Output transformations differed by condition, so MSE comparisons are not capacity/output-scale matched.",
+    "The registered shared-sensor and shuffled-message controls were only approximate implementations.",
+    "Therefore these values are retained as exploratory pilot output, not confirmatory evidence."
+  ]
+}
