@@ -31,8 +31,7 @@ def main():
         rand2=rng.normal(0,1,(N,T))
         # Single aggregate sensor plus an independent random second channel.
         # The aggregate sensor is generated independently for this condition.
-        aggregate=np.sum(x*weights[None,:,:],axis=2)+rng.normal(0,sigma,(N,T))
-        preds["single_sensor_shared"]=signp(aggregate[:,sl]+rand2[:,sl])
+        preds["single_sensor_shared"]=signp(shared1[:,sl]+rand2[:,sl])
         # Shuffle partner observations within each trajectory across scored times.
         shuffled=np.empty_like(obs2)
         for i in range(N): shuffled[i]=rng.permutation(obs2[i])
