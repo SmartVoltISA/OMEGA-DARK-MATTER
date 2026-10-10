@@ -1,0 +1,208 @@
+{
+  "experiment": "OMEGA-DUAL-003",
+  "status": "EXECUTED_LOCALLY",
+  "date": "2026-10-10",
+  "seed": 20261010,
+  "n_trajectories_per_sigma": 300,
+  "steps_per_trajectory": 240,
+  "burn_in": 40,
+  "bootstrap_resamples": 2000,
+  "results": [
+    {
+      "sigma": 0.2,
+      "n_trajectories": 300,
+      "scored_steps": 200,
+      "conditions": {
+        "specialized": {
+          "accuracy": 0.8836,
+          "trajectory_bootstrap95": [
+            0.8806333333333334,
+            0.88668375
+          ]
+        },
+        "shared_aggregate": {
+          "accuracy": 0.8993166666666668,
+          "trajectory_bootstrap95": [
+            0.8964833333333335,
+            0.90203375
+          ]
+        },
+        "misallocated_specialists": {
+          "accuracy": 0.65015,
+          "trajectory_bootstrap95": [
+            0.6440166666666667,
+            0.6561008333333332
+          ]
+        },
+        "single_sensor_shared": {
+          "accuracy": 0.6257,
+          "trajectory_bootstrap95": [
+            0.6217658333333332,
+            0.6297670833333333
+          ]
+        },
+        "shuffled_partner": {
+          "accuracy": 0.6304666666666666,
+          "trajectory_bootstrap95": [
+            0.6253991666666667,
+            0.6356166666666667
+          ]
+        },
+        "paired_specialized_minus_shared": {
+          "mean_accuracy_difference": -0.01571666666666667,
+          "trajectory_bootstrap95": [
+            -0.018750000000000006,
+            -0.012766250000000008
+          ]
+        }
+      },
+      "regime_accuracy": {
+        "regime1": {
+          "specialized": 0.8875416666666667,
+          "shared_aggregate": 0.8999166666666667,
+          "misallocated_specialists": 0.6503333333333333,
+          "single_sensor_shared": 0.6237916666666666,
+          "shuffled_partner": 0.7286666666666667
+        },
+        "regime2": {
+          "specialized": 0.8809722222222223,
+          "shared_aggregate": 0.8989166666666667,
+          "misallocated_specialists": 0.6500277777777778,
+          "single_sensor_shared": 0.6269722222222223,
+          "shuffled_partner": 0.565
+        }
+      }
+    },
+    {
+      "sigma": 0.6,
+      "n_trajectories": 300,
+      "scored_steps": 200,
+      "conditions": {
+        "specialized": {
+          "accuracy": 0.7271,
+          "trajectory_bootstrap95": [
+            0.72315,
+            0.7310166666666666
+          ]
+        },
+        "shared_aggregate": {
+          "accuracy": 0.7545333333333333,
+          "trajectory_bootstrap95": [
+            0.7507995833333334,
+            0.7583520833333333
+          ]
+        },
+        "misallocated_specialists": {
+          "accuracy": 0.5958333333333333,
+          "trajectory_bootstrap95": [
+            0.5907829166666667,
+            0.6009179166666666
+          ]
+        },
+        "single_sensor_shared": {
+          "accuracy": 0.6134333333333334,
+          "trajectory_bootstrap95": [
+            0.6093829166666667,
+            0.6175174999999999
+          ]
+        },
+        "shuffled_partner": {
+          "accuracy": 0.58105,
+          "trajectory_bootstrap95": [
+            0.5767166666666667,
+            0.5855341666666667
+          ]
+        },
+        "paired_specialized_minus_shared": {
+          "mean_accuracy_difference": -0.027433333333333348,
+          "trajectory_bootstrap95": [
+            -0.031867083333333344,
+            -0.023083333333333345
+          ]
+        }
+      },
+      "regime_accuracy": {
+        "regime1": {
+          "specialized": 0.7265,
+          "shared_aggregate": 0.7545833333333334,
+          "misallocated_specialists": 0.5981666666666666,
+          "single_sensor_shared": 0.6176666666666667,
+          "shuffled_partner": 0.6495833333333333
+        },
+        "regime2": {
+          "specialized": 0.7275,
+          "shared_aggregate": 0.7545,
+          "misallocated_specialists": 0.5942777777777778,
+          "single_sensor_shared": 0.6106111111111111,
+          "shuffled_partner": 0.5353611111111111
+        }
+      }
+    },
+    {
+      "sigma": 1,
+      "n_trajectories": 300,
+      "scored_steps": 200,
+      "conditions": {
+        "specialized": {
+          "accuracy": 0.6541166666666667,
+          "trajectory_bootstrap95": [
+            0.6503149999999999,
+            0.6579666666666666
+          ]
+        },
+        "shared_aggregate": {
+          "accuracy": 0.6759833333333334,
+          "trajectory_bootstrap95": [
+            0.6718666666666667,
+            0.6800166666666666
+          ]
+        },
+        "misallocated_specialists": {
+          "accuracy": 0.5748166666666666,
+          "trajectory_bootstrap95": [
+            0.5703329166666666,
+            0.5793170833333333
+          ]
+        },
+        "single_sensor_shared": {
+          "accuracy": 0.59485,
+          "trajectory_bootstrap95": [
+            0.5907495833333334,
+            0.59888375
+          ]
+        },
+        "shuffled_partner": {
+          "accuracy": 0.5581333333333334,
+          "trajectory_bootstrap95": [
+            0.5538995833333333,
+            0.5625666666666667
+          ]
+        },
+        "paired_specialized_minus_shared": {
+          "mean_accuracy_difference": -0.021866666666666663,
+          "trajectory_bootstrap95": [
+            -0.027133333333333322,
+            -0.016766666666666666
+          ]
+        }
+      },
+      "regime_accuracy": {
+        "regime1": {
+          "specialized": 0.6545,
+          "shared_aggregate": 0.67825,
+          "misallocated_specialists": 0.57825,
+          "single_sensor_shared": 0.5980416666666667,
+          "shuffled_partner": 0.60325
+        },
+        "regime2": {
+          "specialized": 0.6538611111111111,
+          "shared_aggregate": 0.6744722222222223,
+          "misallocated_specialists": 0.5725277777777777,
+          "single_sensor_shared": 0.5927222222222223,
+          "shuffled_partner": 0.5280555555555555
+        }
+      }
+    }
+  ],
+  "scope": "Synthetic task-dependent sensor allocation benchmark only."
+}
